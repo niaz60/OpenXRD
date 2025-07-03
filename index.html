@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenXRD - Open X-Ray Diffraction Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: #95a5a6;
+        }
+
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        .stats {
+            background: #34495e;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .stats h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            color: #7f8c8d;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: #ecf0f1;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .hero {
+                padding: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">OpenXRD</div>
+            <div class="subtitle">Open X-Ray Diffraction Tools & Dataset</div>
+            
+            <div class="badges">
+                <span class="badge">🔬 Crystallography</span>
+                <span class="badge">📊 Open Dataset</span>
+                <span class="badge">🛠️ Analysis Tools</span>
+                <span class="badge">📚 Educational</span>
+            </div>
+        </header>
+
+        <div class="hero">
+            <h1>Advancing X-Ray Diffraction Analysis</h1>
+            <p>OpenXRD provides open-source tools, datasets, and educational resources for X-ray diffraction and crystallography research. Our goal is to make crystallographic analysis more accessible to researchers and students worldwide.</p>
+            
+            <div class="buttons">
+                <a href="https://github.com/niaz60/OpenXRD" class="btn" target="_blank">View on GitHub</a>
+                <a href="https://github.com/niaz60/OpenXRD/releases" class="btn btn-secondary" target="_blank">Download</a>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>XRD Pattern Analysis</h3>
+                <p>Tools for processing and analyzing X-ray diffraction patterns with automated peak detection and phase identification capabilities.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🗃️</div>
+                <h3>Curated Dataset</h3>
+                <p>Comprehensive collection of crystallographic data, questions, and educational materials for learning and research.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Educational Resources</h3>
+                <p>Learning materials, tutorials, and examples to help students and researchers understand XRD concepts and techniques.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Analysis Utilities</h3>
+                <p>Python-based tools for crystal structure determination, unit cell analysis, and diffraction geometry calculations.</p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h3>Project Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">MIT</div>
+                    <div class="stat-label">License</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Python</div>
+                    <div class="stat-label">Language</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Active</div>
+                    <div class="stat-label">Development</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 OpenXRD Project. Licensed under MIT License.</p>
+            <p>Advancing materials science through open data and collaborative research.</p>
+        </footer>
+    </div>
+</body>
+</html>
