@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenXRD - Open X-Ray Diffraction Tools</title>
+    <title>OpenXRD - LLM Crystallography Benchmark</title>
     <style>
         * {
             margin: 0;
@@ -194,6 +194,19 @@
             color: #2c3e50;
         }
 
+        .methodology {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .methodology h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -218,78 +231,83 @@
     <div class="container">
         <header>
             <div class="logo">OpenXRD</div>
-            <div class="subtitle">Open X-Ray Diffraction Tools & Dataset</div>
+            <div class="subtitle">LLM/MLLM Crystallography Benchmark & Enhancement Framework</div>
             
             <div class="badges">
-                <span class="badge">🔬 Crystallography</span>
-                <span class="badge">📊 Open Dataset</span>
-                <span class="badge">🛠️ Analysis Tools</span>
-                <span class="badge">📚 Educational</span>
+                <span class="badge">🤖 AI Evaluation</span>
+                <span class="badge">📊 217-Question Benchmark</span>
+                <span class="badge">🔬 Crystallography QA</span>
+                <span class="badge">📚 Open/Closed-Book Testing</span>
             </div>
         </header>
 
         <div class="hero">
-            <h1>Advancing X-Ray Diffraction Analysis</h1>
-            <p>OpenXRD provides open-source tools, datasets, and educational resources for X-ray diffraction and crystallography research. Our goal is to make crystallographic analysis more accessible to researchers and students worldwide.</p>
+            <h1>Benchmarking AI Models on Crystallography Knowledge</h1>
+            <p>OpenXRD is a comprehensive evaluation framework for testing Large Language Models (LLMs) and Multimodal LLMs on X-ray diffraction and crystallography questions. Our benchmark includes 217 expert-reviewed questions and evaluates model performance in both open-book and closed-book settings using AI-generated and expert-reviewed supporting materials.</p>
             
             <div class="buttons">
                 <a href="https://arxiv.org/pdf/2507.09155" class="btn btn-paper" target="_blank">📄 Read Paper</a>
-                <a href="https://github.com/niaz60/OpenXRD" class="btn" target="_blank">View on GitHub</a>
-                <a href="https://github.com/niaz60/OpenXRD/releases" class="btn btn-secondary" target="_blank">Download</a>
+                <a href="https://github.com/niaz60/OpenXRD" class="btn" target="_blank">View Dataset</a>
+                <a href="https://github.com/niaz60/OpenXRD/releases" class="btn btn-secondary" target="_blank">Download Code</a>
             </div>
         </div>
 
         <div class="features">
             <div class="feature-card">
-                <div class="feature-icon">🔍</div>
-                <h3>XRD Pattern Analysis</h3>
-                <p>Tools for processing and analyzing X-ray diffraction patterns with automated peak detection and phase identification capabilities.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🗃️</div>
-                <h3>Curated Dataset</h3>
-                <p>Comprehensive collection of crystallographic data, questions, and educational materials for learning and research.</p>
+                <div class="feature-icon">❓</div>
+                <h3>217-Question Benchmark</h3>
+                <p>Expert-curated multiple-choice questions covering fundamental to advanced crystallography concepts, from basic definitions to complex structural analysis.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">📖</div>
-                <h3>Educational Resources</h3>
-                <p>Learning materials, tutorials, and examples to help students and researchers understand XRD concepts and techniques.</p>
+                <h3>Open vs Closed-Book Evaluation</h3>
+                <p>Compare model performance with and without supporting materials to understand how external knowledge affects AI reasoning in specialized domains.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🔧</div>
-                <h3>Analysis Utilities</h3>
-                <p>Python-based tools for crystal structure determination, unit cell analysis, and diffraction geometry calculations.</p>
+                <div class="feature-icon">🤖</div>
+                <h3>AI-Generated Supporting Materials</h3>
+                <p>GPT-4.5 generated contextual explanations, refined through expert review, to enhance model understanding without revealing answers.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚖️</div>
+                <h3>Comprehensive Model Comparison</h3>
+                <p>Evaluate performance across GPT-4 variants, O-series models, and LLaVA-based vision-language models on crystallographic reasoning tasks.</p>
             </div>
         </div>
 
+        <div class="methodology">
+            <h3>Key Findings</h3>
+            <p>Our research reveals an inverted-U relationship in model improvement: mid-capacity models (7B-34B parameters) benefit most from external knowledge, gaining up to +11.5% accuracy with expert-reviewed materials. Larger models show minimal improvement, while smaller models have limited capacity to utilize additional information effectively. This suggests cost-effective deployment strategies where mid-sized models with expert-reviewed materials can approach larger model performance on specialized scientific tasks.</p>
+        </div>
+
         <div class="stats">
-            <h3>Project Statistics</h3>
+            <h3>Benchmark Statistics</h3>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Open Source</div>
+                    <div class="stat-number">217</div>
+                    <div class="stat-label">Expert Questions</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">MIT</div>
-                    <div class="stat-label">License</div>
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Models Tested</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">Python</div>
-                    <div class="stat-label">Language</div>
+                    <div class="stat-number">+11.5%</div>
+                    <div class="stat-label">Max Improvement</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">Active</div>
-                    <div class="stat-label">Development</div>
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Evaluation Modes</div>
                 </div>
             </div>
         </div>
 
         <footer>
             <p>&copy; 2025 OpenXRD Project. Licensed under MIT License.</p>
-            <p>Advancing materials science through open data and collaborative research.</p>
+            <p>Advancing AI evaluation in materials science through rigorous benchmarking.</p>
         </footer>
     </div>
 </body>
