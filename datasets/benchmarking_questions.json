@@ -1,0 +1,2784 @@
+[
+    {
+        "question": "How many crystal systems are there in crystallography?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "correct_answer": 2,
+        "explanation": "There are 7 crystal systems in crystallography.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "How many lattice systems are there in crystallography?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "correct_answer": 2,
+        "explanation": "There are 7 lattice systems in crystallography.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "How many crystallographic point groups are there in crystallography?",
+        "options": [
+            "14",
+            "23",
+            "32",
+            "48"
+        ],
+        "correct_answer": 2,
+        "explanation": "There are 32 crystallographic point groups in crystallography.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "How many crystallographic space groups exist?",
+        "options": [
+            "230",
+            "128",
+            "360",
+            "180"
+        ],
+        "correct_answer": 0,
+        "explanation": "There are 230 crystallographic space groups.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which range of space groups is associated with the cubic crystal system?",
+        "options": [
+            "1–74",
+            "143–194",
+            "195–230",
+            "75–142"
+        ],
+        "correct_answer": 2,
+        "explanation": "The cubic crystal system is associated with space groups 195-230.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which range of space groups is associated with the tetragonal crystal system?",
+        "options": [
+            "195–230",
+            "1–74",
+            "143–194",
+            "75–142"
+        ],
+        "correct_answer": 3,
+        "explanation": "The tetragonal crystal system is associated with space groups 75-142.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which range of space groups is associated with the orthorhombic crystal system?",
+        "options": [
+            "1–15",
+            "16–74",
+            "75–142",
+            "195–230"
+        ],
+        "correct_answer": 1,
+        "explanation": "The orthorhombic crystal system is associated with space groups 16-74.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which range of space groups is associated with the hexagonal crystal system?",
+        "options": [
+            "16–74",
+            "75–142",
+            "168–194",
+            "195–230"
+        ],
+        "correct_answer": 2,
+        "explanation": "The hexagonal crystal system is associated with space groups 168-194.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which range of space groups is associated with the triclinic crystal system?",
+        "options": [
+            "1–2",
+            "3–15",
+            "16–74",
+            "143–194"
+        ],
+        "correct_answer": 0,
+        "explanation": "The triclinic crystal system is associated with space groups 1-2.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which range of space groups is associated with the monoclinic crystal system?",
+        "options": [
+            "1–2",
+            "3–15",
+            "16–74",
+            "143–194"
+        ],
+        "correct_answer": 1,
+        "explanation": "The monoclinic crystal system is associated with space groups 3-15.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "How many point groups are there in the cubic crystal system?",
+        "options": [
+            "3",
+            "5",
+            "7",
+            "9"
+        ],
+        "correct_answer": 1,
+        "explanation": "There are 5 point groups in the cubic crystal system.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "How many point groups are there in the tetragonal crystal system?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "correct_answer": 2,
+        "explanation": "There are 7 point groups in the tetragonal crystal system.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "What determines the radius of the Ewald sphere in crystallography?",
+        "options": [
+            "The size of the crystal",
+            "The angle of diffraction",
+            "The wavelength of the incident radiation",
+            "The temperature of the sample"
+        ],
+        "correct_answer": 2,
+        "explanation": "The radius of the Ewald sphere is determined by the wavelength of the incident radiation.",
+        "category": "Crystallography",
+        "subtask": "Instrumentation"
+    },
+    {
+        "question": "What fundamental property allows crystals to diffract X-rays?",
+        "options": [
+            "Their chemical composition",
+            "Their periodic atomic arrangement in three dimensions",
+            "Their amorphous nature",
+            "Their large number of atoms"
+        ],
+        "correct_answer": 1,
+        "explanation": "Crystals diffract X-rays due to their periodic atomic arrangement in three dimensions.",
+        "category": "Crystallography",
+        "subtask": "Phase_Identification"
+    },
+    {
+        "question": "In crystallography, what is a crystal defined as?",
+        "options": [
+            "A solid composed of atoms in a random arrangement",
+            "A solid composed of atoms arranged in a pattern periodic in three dimensions",
+            "A solid that behaves like an undercooled liquid",
+            "A material without any regular internal structure"
+        ],
+        "correct_answer": 1,
+        "explanation": "A crystal is defined as a solid composed of atoms arranged in a pattern periodic in three dimensions.",
+        "category": "Crystallography",
+        "subtask": "Material_Properties"
+    },
+    {
+        "question": "What term is used to describe materials like glass, which lack a regular internal structure?",
+        "options": [
+            "Crystalline",
+            "Periodic",
+            "Amorphous",
+            "Tetragonal"
+        ],
+        "correct_answer": 2,
+        "explanation": "Materials that lack a regular internal structure are described as amorphous.",
+        "category": "Crystallography",
+        "subtask": "Material_Properties"
+    },
+    {
+        "question": "What is a unit cell in a crystal lattice?",
+        "options": [
+            "The smallest group of atoms in a liquid",
+            "Any one of the identical cells in a lattice, chosen as a reference",
+            "A cell with random shape and size",
+            "The largest cell in a crystal lattice"
+        ],
+        "correct_answer": 1,
+        "explanation": "A unit cell is any one of the identical cells in a lattice, chosen as a reference.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "What are the three vectors that describe the size and shape of a unit cell?",
+        "options": [
+            "α, β, γ",
+            "a, b, c"
+        ],
+        "correct_answer": 1,
+        "explanation": "The three vectors that describe the size and shape of a unit cell are a, b, and c.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "What term is used for the lengths of the crystallographic axes and the angles between them?",
+        "options": [
+            "Crystal bounds",
+            "Cell edges",
+            "Lattice constants or lattice parameters",
+            "Axis limits"
+        ],
+        "correct_answer": 2,
+        "explanation": "The lengths of crystallographic axes and angles between them are called lattice constants or lattice parameters.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "What defines the entire point lattice in a crystal?",
+        "options": [
+            "The number of atoms in each cell",
+            "The arrangement of atoms in each plane",
+            "Translations provided by the vectors aaa, bbb, and ccc",
+            "The angles between each unit cell"
+        ],
+        "correct_answer": 2,
+        "explanation": "The entire point lattice in a crystal is defined by translations provided by the vectors aaa, bbb, and ccc.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "How many crystal systems are needed to include all possible point lattices?",
+        "options": [
+            "Five",
+            "Six",
+            "Seven",
+            "Eight"
+        ],
+        "correct_answer": 2,
+        "explanation": "Seven crystal systems are needed to include all possible point lattices.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Who demonstrated that there are only fourteen possible point lattices?",
+        "options": [
+            "Buerger",
+            "Phillips",
+            "Groves",
+            "Bravais"
+        ],
+        "correct_answer": 3,
+        "explanation": "Bravais demonstrated that there are only fourteen possible point lattices.",
+        "category": "Crystallography",
+        "subtask": "Material_Properties"
+    },
+    {
+        "question": "What distinguishes primitive cells from nonprimitive cells?",
+        "options": [
+            "Primitive cells contain no lattice points.",
+            "Primitive cells contain exactly one lattice point per cell.",
+            "Primitive cells contain multiple lattice points at each corner.",
+            "Primitive cells contain lattice points only on faces."
+        ],
+        "correct_answer": 1,
+        "explanation": "Primitive cells are distinguished by containing exactly one lattice point per cell.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "What are the axial lengths and angles for the cubic crystal system?",
+        "options": [
+            "Three unequal axes at 90 degree",
+            "Three equal axes at 90 degree"
+        ],
+        "correct_answer": 1,
+        "explanation": "The cubic crystal system has three equal axes at 90 degrees.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which lattice symbol represents a face-centered lattice in the cubic system?",
+        "options": [
+            "P",
+            "I",
+            "F",
+            "R"
+        ],
+        "correct_answer": 2,
+        "explanation": "F represents a face-centered lattice in the cubic system.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "What is meant by 'symmetry operations' in crystallography?",
+        "options": [
+            "Operations that change the chemical composition of a crystal",
+            "Operations that bring a body into coincidence with itself",
+            "Operations that distort the crystal lattice",
+            "Operations that eliminate planes of symmetry"
+        ],
+        "correct_answer": 1,
+        "explanation": "Symmetry operations are operations that bring a body into coincidence with itself.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which crystal system has all three lattice parameters equal and all angles equal to 90°?",
+        "options": [
+            "Cubic",
+            "Tetragonal",
+            "Orthorhombic",
+            "Monoclinic"
+        ],
+        "correct_answer": 0,
+        "explanation": "The cubic crystal system is defined by all three lattice parameters being equal (a=b=c) and all angles equal to 90°.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "In which crystal system are the lattice parameters a=b≠c and all angles equal to 90°?",
+        "options": [
+            "Hexagonal",
+            "Tetragonal",
+            "Rhombohedral",
+            "Orthorhombic"
+        ],
+        "correct_answer": 1,
+        "explanation": "The tetragonal crystal system is characterized by a=b≠c and all angles equal to 90°.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "For the hexagonal crystal system, what are the values of the angles?",
+        "options": [
+            "α=β=γ=90 degree",
+            "α=β=90, γ=120 degree",
+            "α=β=γ=120 degree",
+            "α=90∘,β=120, γ=90 degree"
+        ],
+        "correct_answer": 1,
+        "explanation": "In the hexagonal crystal system, α=β=90° and γ=120°.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which crystal system has all three lattice parameters different (a≠b≠c) but all angles equal to 90°?",
+        "options": [
+            "Monoclinic",
+            "Triclinic",
+            "Orthorhombic",
+            "Rhombohedral"
+        ],
+        "correct_answer": 2,
+        "explanation": "The orthorhombic crystal system has different lattice parameters (a≠b≠c) but all angles equal to 90°.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "The rhombohedral crystal system is defined by which of the following sets of conditions?",
+        "options": [
+            "a=b=c, α=β=γ=90",
+            "a=b=c, α=β=γ≠90",
+            "a≠b≠c, α=β=γ=90",
+            "a≠b≠c, α≠β≠γ≠90"
+        ],
+        "correct_answer": 1,
+        "explanation": "The rhombohedral crystal system has equal lattice parameters (a=b=c) and equal angles that are not 90° (α=β=γ≠90).",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "In which crystal system are all three lattice parameters and all three angles are different?",
+        "options": [
+            "Monoclinic",
+            "Triclinic",
+            "Orthorhombic",
+            "Tetragonal"
+        ],
+        "correct_answer": 1,
+        "explanation": "In the triclinic crystal system, all three lattice parameters and all three angles are different.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "The orthorhombic crystal system is defined by which set of conditions?",
+        "options": [
+            "a=b=c, α=β=γ=90",
+            "a≠b≠c, α=β=γ=90",
+            "a=b≠c, α=β=γ≠90",
+            "a≠b≠c, α≠β=γ≠90"
+        ],
+        "correct_answer": 1,
+        "explanation": "The orthorhombic crystal system is defined by a≠b≠c and α=β=γ=90°.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "The monoclinic crystal system is defined by which set of conditions?",
+        "options": [
+            "a=b=c, α=β=γ=90",
+            "a=b≠c, α=β=γ=90",
+            "a≠b≠c, α=γ=90, β≠90",
+            "a=b≠c, α≠β≠γ≠90"
+        ],
+        "correct_answer": 2,
+        "explanation": "The monoclinic crystal system is defined by a≠b≠c, α=γ=90°, and β≠90°.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "The triclinic crystal system is defined by which set of conditions?",
+        "options": [
+            "a=b=c, α=β=γ=90",
+            "a≠b≠c, α=β=γ=90",
+            "a≠b≠c, α≠β≠γ",
+            "a=b≠c, α=β=γ=120"
+        ],
+        "correct_answer": 2,
+        "explanation": "The triclinic crystal system is defined by a≠b≠c and α≠β≠γ.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which set of planes belongs to the form {100} in the tetragonal crystal system?",
+        "options": [
+            "(100),(010),(-100),(0-10)",
+            "(001),(100),(101),(110)"
+        ],
+        "correct_answer": 0,
+        "explanation": "In the tetragonal crystal system, the form {100} includes the planes (100),(010),(-100),(0-10).",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which of the following equations must be satisfied for a plane with indices (hkl) to belong to a zone with direction indices [uvw]?",
+        "options": [
+            "hu+kv+lw=1",
+            "hu+kv+lw=0",
+            "hu+kv+lw=u+v+w"
+        ],
+        "correct_answer": 1,
+        "explanation": "For a plane (hkl) to belong to a zone [uvw], the equation hu+kv+lw=0 must be satisfied.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "For two planes with indices (h1 k1 l1) and (h2 k2 l2), what are the indices u, v, and w for their zone axis?",
+        "options": [
+            "u = h1*k2−k1*h2",
+            "u = k1*l2−l1*k2"
+        ],
+        "correct_answer": 1,
+        "explanation": "For two planes (h1 k1 l1) and (h2 k2 l2), their zone axis indices are calculated using u = k1*l2−l1*k2.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which of the following best describes the relationship between planes that belong to the same zone in a crystal lattice?",
+        "options": [
+            "They have identical Miller indices but different orientations in the crystal.",
+            "They are parallel to a common line, called the zone axis, but may have different Miller indices and spacings.",
+            "They intersect at a single point and have identical interplanar spacings.",
+            "They form a closed loop in the lattice, ensuring a uniform orientation."
+        ],
+        "correct_answer": 1,
+        "explanation": "Planes in the same zone are parallel to a common line (zone axis) but may have different Miller indices and spacings.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "Which of the following statements about interplanar spacing d(hkl) in a crystal lattice is correct?",
+        "options": [
+            "Planes with large interplanar spacing have high indices and pass through a low density of lattice points.",
+            "Planes with large interplanar spacing have low indices and pass through a high density of lattice points.",
+            "Interplanar spacing does not depend on the plane indices.",
+            "Interplanar spacing is always the same for all planes in a crystal lattice."
+        ],
+        "correct_answer": 1,
+        "explanation": "Planes with large interplanar spacing have low indices and pass through a high density of lattice points.",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "In a cubic crystal system, what is the relationship between the interplanar spacing d(hkl) and the Miller indices (h,k,l)?",
+        "options": [
+            "d(hkl) is directly proportional to h+k+l.",
+            "d(hkl) is inversely proportional to the square root of the sum of the squares of h, k, and l.",
+            "d(hkl) is independent of h, k, and l."
+        ],
+        "correct_answer": 1,
+        "explanation": "In a cubic crystal system, d(hkl) is inversely proportional to the square root of (h²+k²+l²).",
+        "category": "Crystallography",
+        "subtask": "Structural_Analysis"
+    },
+    {
+        "question": "What is the fundamental principle regarding the arrangement of atoms in a crystal structure?",
+        "options": [
+            "Atoms are randomly arranged.",
+            "Atoms are set in space either on points of a Bravais lattice or in a fixed relation to those points.",
+            "Atoms only form on the edges of the lattice.",
+            "Atoms can exist anywhere in the crystal with no fixed relation."
+        ],
+        "correct_answer": 1,
+        "explanation": "The fundamental principle of crystal structure is that atoms are arranged in space either on points of a Bravais lattice or in a fixed relation to those points.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Structure_Fundamentals"
+    },
+    {
+        "question": "Which lattice structures are commonly observed in metals?",
+        "options": [
+            "Simple Cubic and Body-Centered Tetragonal",
+            "Face-Centered Cubic and Body-Centered Cubic",
+            "Hexagonal Close-Packed and Orthorhombic",
+            "Rhombohedral and Triclinic"
+        ],
+        "correct_answer": 1,
+        "explanation": "Face-Centered Cubic (FCC) and Body-Centered Cubic (BCC) are the most commonly observed lattice structures in metals.",
+        "category": "Crystallography",
+        "subtask": "Metal_Crystal_Structures"
+    },
+    {
+        "question": "How many atoms per unit cell are present in a body-centered cubic (BCC) structure?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": 1,
+        "explanation": "A body-centered cubic (BCC) structure contains 2 atoms per unit cell.",
+        "category": "Crystallography",
+        "subtask": "Unit_Cell_Analysis"
+    },
+    {
+        "question": "What is the significance of the arrangement of atoms in a Bravais lattice?",
+        "options": [
+            "It enables the crystal to exhibit periodicity and symmetry.",
+            "It allows for only one type of atomic arrangement.",
+            "It prevents the formation of any symmetry elements.",
+            "It is only relevant to metals."
+        ],
+        "correct_answer": 0,
+        "explanation": "The arrangement of atoms in a Bravais lattice is significant because it enables the crystal to exhibit periodicity and symmetry.",
+        "category": "Crystallography",
+        "subtask": "Lattice_Theory"
+    },
+    {
+        "question": "Which of the following statements best describes the arrangement of ions in a NaCl crystal structure?",
+        "options": [
+            "It has a body-centered cubic structure.",
+            "It has a simple cubic structure.",
+            "It has a face-centered cubic structure.",
+            "It has a hexagonal structure."
+        ],
+        "correct_answer": 2,
+        "explanation": "The NaCl crystal structure has a face-centered cubic arrangement of ions.",
+        "category": "Crystallography",
+        "subtask": "Ionic_Structures"
+    },
+    {
+        "question": "The term \"diamond cubic\" is used to distinguish the structure of diamond from which of the following?",
+        "options": [
+            "Simple cubic",
+            "Hexagonal close-packed",
+            "Body-centered cubic",
+            "Face-centered cubic"
+        ],
+        "correct_answer": 3,
+        "explanation": "The term diamond cubic distinguishes the structure from face-centered cubic.",
+        "category": "Crystallography",
+        "subtask": "Special_Structures"
+    },
+    {
+        "question": "Which of the following pairs of elements or compounds typically adopt a structure similar to the diamond cubic structure?",
+        "options": [
+            "NaCl and KCl",
+            "Silicon and germanium",
+            "Copper and zinc",
+            "MnO and Fe₂O₃"
+        ],
+        "correct_answer": 1,
+        "explanation": "Silicon and germanium typically adopt a structure similar to the diamond cubic structure.",
+        "category": "Crystallography",
+        "subtask": "Structure_Types"
+    },
+    {
+        "question": "Ferrites used in digital memory are based on which type of lattice structure?",
+        "options": [
+            "Body-centered cubic",
+            "Face-centered cubic",
+            "Hexagonal",
+            "Simple cubic"
+        ],
+        "correct_answer": 1,
+        "explanation": "Ferrites used in digital memory are based on a face-centered cubic lattice structure.",
+        "category": "Crystallography",
+        "subtask": "Applied_Structures"
+    },
+    {
+        "question": "What is the relationship between the number of atoms per unit cell and the type of Bravais lattice in a body-centered structure?",
+        "options": [
+            "It must be a multiple of 3.",
+            "It must be a multiple of 2.",
+            "It must be a multiple of 5.",
+            "There is no restriction on the number of atoms."
+        ],
+        "correct_answer": 1,
+        "explanation": "In a body-centered structure, the number of atoms per unit cell must be a multiple of 2.",
+        "category": "Crystallography",
+        "subtask": "Unit_Cell_Properties"
+    },
+    {
+        "question": "At low temperatures in the alloy AuCu₃, the gold atoms occupy which lattice positions?",
+        "options": [
+            "Body-centered positions",
+            "Edge-centered positions",
+            "Face-centered positions",
+            "Only the cube corner positions"
+        ],
+        "correct_answer": 3,
+        "explanation": "In the AuCu₃ alloy at low temperatures, the gold atoms occupy only the cube corner positions.",
+        "category": "Crystallography",
+        "subtask": "Alloy_Structures"
+    },
+    {
+        "question": "Which of the following best describes why an ordered solid solution like AuCu₃ is referred to as a \"half-hearted compound\"?",
+        "options": [
+            "It melts without becoming disordered.",
+            "It remains ordered at all temperatures.",
+            "It becomes disordered before it reaches its melting point.",
+            "It has a simple cubic structure at all temperatures."
+        ],
+        "correct_answer": 2,
+        "explanation": "An ordered solid solution like AuCu₃ is called a \"half-hearted compound\" because it becomes disordered before reaching its melting point.",
+        "category": "Crystallography",
+        "subtask": "Phase_Transitions"
+    },
+    {
+        "question": "In a body-centered cubic (BCC) structure, the distance of closest approach between atom centers is:",
+        "options": [
+            "a",
+            "√3/2 a"
+        ],
+        "correct_answer": 1,
+        "explanation": "In a BCC structure, the distance of closest approach between atom centers is √3/2 a.",
+        "category": "Crystallography",
+        "subtask": "Atomic_Spacing"
+    },
+    {
+        "question": "For a face-centered cubic (FCC) structure, the distance of closest approach is given by:",
+        "options": [
+            "√2/2 a",
+            "a"
+        ],
+        "correct_answer": 0,
+        "explanation": "In an FCC structure, the distance of closest approach is given by √2/2 a.",
+        "category": "Crystallography",
+        "subtask": "Atomic_Spacing"
+    },
+    {
+        "question": "In a hexagonal close-packed (HCP) structure, what formula represents the distance between an atom in the basal plane and its neighbors above or below?",
+        "options": [
+            "√3/2 a",
+            "a",
+            "√(a²/3 + c²/4)"
+        ],
+        "correct_answer": 2,
+        "explanation": "In an HCP structure, the distance between an atom in the basal plane and its neighbors above or below is given by √(a²/3 + c²/4).",
+        "category": "Crystallography",
+        "subtask": "Atomic_Spacing"
+    },
+    {
+        "question": "The coordination number of an atom in an FCC or HCP structure is:",
+        "options": [
+            "4",
+            "6",
+            "8",
+            "12"
+        ],
+        "correct_answer": 3,
+        "explanation": "The coordination number of an atom in both FCC and HCP structures is 12.",
+        "category": "Crystallography",
+        "subtask": "Coordination_Numbers"
+    },
+    {
+        "question": "Which of the following crystal structures has a coordination number of 8?",
+        "options": [
+            "FCC",
+            "HCP",
+            "BCC",
+            "Diamond cubic"
+        ],
+        "correct_answer": 2,
+        "explanation": "The BCC crystal structure has a coordination number of 8.",
+        "category": "Crystallography",
+        "subtask": "Coordination_Numbers"
+    },
+    {
+        "question": "A coordination number of 4 is characteristic of which crystal structure?",
+        "options": [
+            "Hexagonal close-packed (HCP)",
+            "Body-centered cubic (BCC)",
+            "Diamond cubic",
+            "Face-centered cubic (FCC)"
+        ],
+        "correct_answer": 2,
+        "explanation": "A coordination number of 4 is characteristic of the diamond cubic crystal structure.",
+        "category": "Crystallography",
+        "subtask": "Coordination_Numbers"
+    },
+    {
+        "question": "In which of the following structures is each atom surrounded by the fewest number of neighbors?",
+        "options": [
+            "Face-centered cubic (FCC)",
+            "Body-centered cubic (BCC)",
+            "Diamond cubic"
+        ],
+        "correct_answer": 2,
+        "explanation": "In the diamond cubic structure, each atom is surrounded by the fewest number of neighbors (coordination number of 4).",
+        "category": "Crystallography",
+        "subtask": "Coordination_Numbers"
+    },
+    {
+        "question": "In the NaCl structure, the central Cl⁻ ion at ½ ½ ½ is surrounded by Na⁺ ions in which type of arrangement?",
+        "options": [
+            "Tetrahedral",
+            "Octahedral",
+            "Hexagonal",
+            "Cubic"
+        ],
+        "correct_answer": 1,
+        "explanation": "In the NaCl structure, the central Cl⁻ ion is surrounded by Na⁺ ions in an octahedral arrangement.",
+        "category": "Crystallography",
+        "subtask": "Ionic_Arrangements"
+    },
+    {
+        "question": "Which of the following statements is true regarding coordination numbers?",
+        "options": [
+            "FCC and HCP structures both have a coordination number of 8.",
+            "BCC has a lower coordination number than FCC.",
+            "Diamond cubic has a coordination number of 12.",
+            "All crystal structures have the same coordination number."
+        ],
+        "correct_answer": 1,
+        "explanation": "BCC has a lower coordination number (8) than FCC (12).",
+        "category": "Crystallography",
+        "subtask": "Coordination_Numbers"
+    },
+    {
+        "question": "What is a common characteristic of planes with low indices?",
+        "options": [
+            "High density of lattice points",
+            "High transparency",
+            "High elasticity",
+            "High malleability"
+        ],
+        "correct_answer": 0,
+        "explanation": "Planes with low indices are characterized by having a high density of lattice points.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Planes"
+    },
+    {
+        "question": "What term does a metallurgist typically use to describe a crystal in a polycrystalline mass of metal?",
+        "options": [
+            "Atom",
+            "Grain"
+        ],
+        "correct_answer": 1,
+        "explanation": "In metallurgy, a crystal within a polycrystalline mass of metal is referred to as a grain.",
+        "category": "Crystallography",
+        "subtask": "Metallurgy_Terminology"
+    },
+    {
+        "question": "What lattice structure does common salt (NaCl) have?",
+        "options": [
+            "Cubic lattice",
+            "Hexagonal lattice",
+            "Tetragonal lattice",
+            "Orthorhombic lattice"
+        ],
+        "correct_answer": 0,
+        "explanation": "Common salt (NaCl) has a cubic lattice structure.",
+        "category": "Crystallography",
+        "subtask": "Ionic_Crystal_Structures"
+    },
+    {
+        "question": "Which crystal structure is associated with natural quartz?",
+        "options": [
+            "Cubic lattice",
+            "Hexagonal lattice",
+            "Orthorhombic lattice",
+            "Triclinic lattice"
+        ],
+        "correct_answer": 1,
+        "explanation": "Natural quartz is associated with a hexagonal lattice structure.",
+        "category": "Crystallography",
+        "subtask": "Mineral_Structures"
+    },
+    {
+        "question": "What is the primary reason for the characteristic shape of a crystal?",
+        "options": [
+            "The type of atoms present",
+            "The external environmental factors",
+            "The arrangement of atoms in the interior",
+            "The mineral content"
+        ],
+        "correct_answer": 2,
+        "explanation": "The characteristic shape of a crystal is primarily determined by the arrangement of atoms in its interior.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Morphology"
+    },
+    {
+        "question": "Which statement is true about gold crystals according to the passage?",
+        "options": [
+            "They have a hexagonal lattice",
+            "They have a cubic lattice",
+            "They are naturally found in octahedral shapes",
+            "They are mostly irregular"
+        ],
+        "correct_answer": 1,
+        "explanation": "Gold crystals have a cubic lattice structure.",
+        "category": "Crystallography",
+        "subtask": "Metal_Structures"
+    },
+    {
+        "question": "What is a common characteristic of twinned crystals?",
+        "options": [
+            "They have two parts that are chemically bonded.",
+            "They are artificially created.",
+            "They have two parts symmetrically related to one another.",
+            "They are found only in metals."
+        ],
+        "correct_answer": 2,
+        "explanation": "Twinned crystals are characterized by having two parts that are symmetrically related to one another.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Twinning"
+    },
+    {
+        "question": "What is the composition plane in a twinned crystal?",
+        "options": [
+            "The plane where the crystal splits into two distinct parts",
+            "The plane on which the two parts of a twinned crystal are united",
+            "The plane where the crystal forms lattice points",
+            "The plane where the crystal's atoms are aligned randomly"
+        ],
+        "correct_answer": 1,
+        "explanation": "The composition plane in a twinned crystal is the plane on which the two parts of a twinned crystal are united.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Twinning"
+    },
+    {
+        "question": "Annealing twins are most common in which types of materials?",
+        "options": [
+            "HCP metals",
+            "FCC metals and alloys",
+            "BCC metals only",
+            "Amorphous materials"
+        ],
+        "correct_answer": 1,
+        "explanation": "Annealing twins are most commonly found in FCC metals and alloys.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Twinning"
+    },
+    {
+        "question": "What orientation relationship is observed in annealing twins in FCC metals?",
+        "options": [
+            "90° rotation about the twin axis",
+            "120° rotation about the twin axis",
+            "180° rotation about the twin axis",
+            "45° rotation about the twin axis"
+        ],
+        "correct_answer": 2,
+        "explanation": "In FCC metals, annealing twins show a 180° rotation about the twin axis.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Twinning"
+    },
+    {
+        "question": "In FCC metals, which crystallographic plane can serve as the twin plane for annealing twins?",
+        "options": [
+            "{110}",
+            "{100}",
+            "{111}",
+            "{101}"
+        ],
+        "correct_answer": 2,
+        "explanation": "In FCC metals, the {111} crystallographic plane can serve as the twin plane for annealing twins.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Twinning"
+    },
+    {
+        "question": "What term is used to describe the part of the grain that is twinned with respect to the other parts in a three-part grain structure?",
+        "options": [
+            "Composition plane",
+            "Twin boundary",
+            "Twin band",
+            "Grain axis"
+        ],
+        "correct_answer": 2,
+        "explanation": "The term 'twin band' is used to describe the part of the grain that is twinned with respect to the other parts in a three-part grain structure.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Twinning"
+    },
+    {
+        "question": "What can cause the formation of twin bands in BCC structures?",
+        "options": [
+            "Impact",
+            "High-temperature annealing",
+            "Slow cooling",
+            "Magnetic field alignment"
+        ],
+        "correct_answer": 0,
+        "explanation": "Impact can cause the formation of twin bands in BCC structures.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Twinning"
+    },
+    {
+        "question": "Which plane typically serves as the twin plane in HCP metals?",
+        "options": [
+            "(102)",
+            "(101)",
+            "(110)",
+            "(112)"
+        ],
+        "correct_answer": 0,
+        "explanation": "In HCP metals, the (102) plane typically serves as the twin plane.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Twinning"
+    },
+    {
+        "question": "What is the main purpose of stereographic projection in crystallography?",
+        "options": [
+            "To measure crystal volume",
+            "To display angular relationships between lattice planes and directions",
+            "To analyze crystal color and clarity",
+            "To determine atomic mass"
+        ],
+        "correct_answer": 1,
+        "explanation": "The main purpose of stereographic projection in crystallography is to display angular relationships between lattice planes and directions.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What is used to represent the orientation of any plane in a crystal?",
+        "options": [
+            "The length of the plane",
+            "The normal of the plane relative to a reference plane",
+            "The atomic mass of the crystal",
+            "The volume of the crystal"
+        ],
+        "correct_answer": 1,
+        "explanation": "The orientation of any plane in a crystal is represented by the normal of the plane relative to a reference plane.",
+        "category": "Crystallography",
+        "subtask": "Crystallographic_Orientation"
+    },
+    {
+        "question": "What are the intersections of plane normals with the surface of a reference sphere called in stereographic projection?",
+        "options": [
+            "Nodes",
+            "Poles",
+            "Axes",
+            "Centers"
+        ],
+        "correct_answer": 1,
+        "explanation": "In stereographic projection, the intersections of plane normals with the surface of a reference sphere are called poles.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "How is the orientation of a plane represented on the sphere in stereographic projection?",
+        "options": [
+            "By its mass",
+            "By its color",
+            "By its thickness",
+            "By its position on the sphere"
+        ],
+        "correct_answer": 3,
+        "explanation": "In stereographic projection, the orientation of a plane is represented by its position on the sphere.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What is a 'great circle' in the context of stereographic projection?",
+        "options": [
+            "A circle with infinite radius",
+            "A circle of maximum diameter on the sphere",
+            "A circle with no poles",
+            "A circle that only intersects the equator"
+        ],
+        "correct_answer": 1,
+        "explanation": "In stereographic projection, a 'great circle' is a circle of maximum diameter on the sphere.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What term is used to describe the trace of a plane that does not pass through the center of the sphere in stereographic projection?",
+        "options": [
+            "Equator",
+            "Minor circle",
+            "Small circle",
+            "Major circle"
+        ],
+        "correct_answer": 2,
+        "explanation": "In stereographic projection, the trace of a plane that does not pass through the center of the sphere is called a 'small circle'.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "On a stereographic projection, what represents the latitude lines?",
+        "options": [
+            "Great circles",
+            "Small circles",
+            "Equatorial lines",
+            "Parallel planes"
+        ],
+        "correct_answer": 1,
+        "explanation": "In stereographic projection, latitude lines are represented by small circles.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What angle is significant in determining the angular relationship between two planes in stereographic projection?",
+        "options": [
+            "The angle between their normals",
+            "The angle of their equatorial distance",
+            "The angle of their rotational symmetry",
+            "The angle of their atomic alignment"
+        ],
+        "correct_answer": 0,
+        "explanation": "The angle between the normals of two planes is significant in determining their angular relationship in stereographic projection.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What is the primary benefit of using the equiangular stereographic projection in crystallography?",
+        "options": [
+            "It preserves volume relationships.",
+            "It preserves angular relationships.",
+            "It distorts all angles equally.",
+            "It maintains atomic distances."
+        ],
+        "correct_answer": 1,
+        "explanation": "The primary benefit of equiangular stereographic projection is that it preserves angular relationships.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What happens if the plane of projection cuts through the center of the sphere in stereographic projection?",
+        "options": [
+            "It creates a small circle.",
+            "It creates a distorted image.",
+            "It becomes part of the great circle.",
+            "It projects beyond the circle."
+        ],
+        "correct_answer": 2,
+        "explanation": "When the plane of projection cuts through the center of the sphere, it becomes part of the great circle.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What is the Wulff net primarily used for in stereographic projection?",
+        "options": [
+            "Measuring atomic distances",
+            "Solving angular problems",
+            "Calculating crystal volume",
+            "Determining crystal color"
+        ],
+        "correct_answer": 1,
+        "explanation": "The Wulff net is primarily used for solving angular problems in stereographic projection.",
+        "category": "Crystallography",
+        "subtask": "Crystallographic_Tools"
+    },
+    {
+        "question": "What does the Wulff net represent?",
+        "options": [
+            "A sphere ruled with latitude and longitude parallels",
+            "A flat plane with parallel lines",
+            "A circular lattice structure",
+            "A triangular grid"
+        ],
+        "correct_answer": 0,
+        "explanation": "The Wulff net represents a sphere ruled with latitude and longitude parallels.",
+        "category": "Crystallography",
+        "subtask": "Crystallographic_Tools"
+    },
+    {
+        "question": "What do the latitude lines on a Wulff net represent?",
+        "options": [
+            "Great circles",
+            "Small circles extending from side to side",
+            "Atomic bonding directions",
+            "Crystal planes"
+        ],
+        "correct_answer": 1,
+        "explanation": "On a Wulff net, the latitude lines represent small circles extending from side to side.",
+        "category": "Crystallography",
+        "subtask": "Crystallographic_Tools"
+    },
+    {
+        "question": "What do the longitude lines (meridians) on a Wulff net represent?",
+        "options": [
+            "The circumference of the sphere",
+            "Small circles parallel to the equator",
+            "Great circles connecting the north and south poles",
+            "Horizontal lines only"
+        ],
+        "correct_answer": 2,
+        "explanation": "The longitude lines (meridians) on a Wulff net represent great circles connecting the north and south poles.",
+        "category": "Crystallography",
+        "subtask": "Crystallographic_Tools"
+    },
+    {
+        "question": "How can greater precision be obtained when using a Wulff net?",
+        "options": [
+            "By using a smaller net",
+            "By using a larger net or mathematical calculation",
+            "By reducing the projection angle",
+            "By applying color-coding"
+        ],
+        "correct_answer": 1,
+        "explanation": "Greater precision can be obtained when using a Wulff net by using a larger net or mathematical calculation.",
+        "category": "Crystallography",
+        "subtask": "Crystallographic_Tools"
+    },
+    {
+        "question": "What must be true for the measurement of the angle between two crystal planes to be possible on a stereographic projection?",
+        "options": [
+            "The poles must lie on a small circle.",
+            "The poles must lie on a great circle.",
+            "The poles must lie at the center of the projection.",
+            "The poles must lie along the equator."
+        ],
+        "correct_answer": 1,
+        "explanation": "For measuring the angle between two crystal planes on a stereographic projection, the poles must lie on a great circle.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What should be done if two poles do not lie on a great circle in stereographic projection?",
+        "options": [
+            "Rotate the projection relative to the Wulff net",
+            "Change the size of the Wulff net",
+            "Use a larger projection plane",
+            "Align the poles with the equator"
+        ],
+        "correct_answer": 0,
+        "explanation": "If two poles do not lie on a great circle, the projection should be rotated relative to the Wulff net.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What is the purpose of a standard projection in crystallography?",
+        "options": [
+            "To measure atomic mass",
+            "To determine the color of crystals",
+            "To show the relative orientation of all important planes in a crystal",
+            "To calculate crystal volume"
+        ],
+        "correct_answer": 2,
+        "explanation": "A standard projection in crystallography is used to show the relative orientation of all important planes in a crystal.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "What is the angle between the axis of a zone and the great circle on a standard projection?",
+        "options": [
+            "0°",
+            "45°",
+            "90°",
+            "180°"
+        ],
+        "correct_answer": 2,
+        "explanation": "The angle between the axis of a zone and the great circle on a standard projection is 90°.",
+        "category": "Crystallography",
+        "subtask": "Stereographic_Projection"
+    },
+    {
+        "question": "Why might it be necessary to determine the Miller indices of a given pole on a crystal projection?",
+        "options": [
+            "To identify atomic composition",
+            "To analyze the pole's symmetry",
+            "To understand the orientation of that direction within the crystal",
+            "To calculate lattice parameters"
+        ],
+        "correct_answer": 2,
+        "explanation": "Determining the Miller indices of a given pole is necessary to understand the orientation of that direction within the crystal.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Orientation"
+    },
+    {
+        "question": "This is a standard projection of cubic crystal on (001), which Miller indices are located at the center of the diagrams?",
+        "options": [
+            "001",
+            "111",
+            "110"
+        ],
+        "correct_answer": 0,
+        "explanation": "In a standard projection of cubic crystal on (001), the Miller indices 001 are located at the center of the diagrams.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Projection"
+    },
+    {
+        "question": "What is the phenomenon of x-ray diffraction?",
+        "options": [
+            "A study of atomic emissions",
+            "An interaction between x-rays and the geometry of crystals",
+            "A method to determine chemical composition",
+            "A technique for visualizing crystal color"
+        ],
+        "correct_answer": 1,
+        "explanation": "X-ray diffraction is an interaction between x-rays and the geometry of crystals.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Diffraction"
+    },
+    {
+        "question": "Who was the German physicist that explored the possibility of x-ray diffraction by crystals in 1912?",
+        "options": [
+            "W. L. Bragg",
+            "Max Planck",
+            "Max von Laue",
+            "Albert Einstein"
+        ],
+        "correct_answer": 2,
+        "explanation": "Max von Laue was the German physicist who explored the possibility of x-ray diffraction by crystals in 1912.",
+        "category": "Crystallography",
+        "subtask": "Historical_Development"
+    },
+    {
+        "question": "According to von Laue's reasoning, what condition was necessary for x-rays to be diffracted by crystals?",
+        "options": [
+            "Crystals needed to be heated",
+            "X-rays had to have a wavelength equal to the atomic diameter",
+            "X-rays had to have a wavelength about equal to the interatomic distance in crystals",
+            "X-rays needed to be polarized"
+        ],
+        "correct_answer": 2,
+        "explanation": "According to von Laue, x-rays needed to have a wavelength about equal to the interatomic distance in crystals to be diffracted.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Diffraction"
+    },
+    {
+        "question": "What did the successful result of von Laue's experiment show?",
+        "options": [
+            "X-rays were absorbed by the crystal",
+            "X-rays produced fluorescence",
+            "X-rays were diffracted by the crystal, forming a pattern of spots",
+            "X-rays destroyed the crystal structure"
+        ],
+        "correct_answer": 2,
+        "explanation": "The successful result of von Laue's experiment showed that x-rays were diffracted by the crystal, forming a pattern of spots.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Diffraction"
+    },
+    {
+        "question": "Who successfully analyzed the Laue experiment in 1912 and simplified the mathematical conditions for diffraction?",
+        "options": [
+            "W. L. Bragg",
+            "W. H. Bragg",
+            "Max von Laue",
+            "Albert Einstein"
+        ],
+        "correct_answer": 0,
+        "explanation": "W. L. Bragg successfully analyzed the Laue experiment in 1912 and simplified the mathematical conditions for diffraction.",
+        "category": "Crystallography",
+        "subtask": "Historical_Development"
+    },
+    {
+        "question": "Diffraction is primarily due to which of the following?",
+        "options": [
+            "Intensity variations in light waves",
+            "Existence of certain phase relations between two or more waves",
+            "Changes in wavelength of light",
+            "Alterations in electric field strength"
+        ],
+        "correct_answer": 1,
+        "explanation": "Diffraction is primarily due to the existence of certain phase relations between two or more waves.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Principles"
+    },
+    {
+        "question": "If two rays are said to be \"in phase\" or \"in step,\" what does this mean?",
+        "options": [
+            "They are moving in opposite directions",
+            "Their electric-field vectors have the same magnitude and direction at the same instant",
+            "They have different amplitudes",
+            "Their wavelengths differ by a factor of two"
+        ],
+        "correct_answer": 1,
+        "explanation": "When two rays are \"in phase\" or \"in step,\" their electric-field vectors have the same magnitude and direction at the same instant.",
+        "category": "Crystallography",
+        "subtask": "Wave_Properties"
+    },
+    {
+        "question": "What does it mean when two rays are \"out of phase\" on the wave front?",
+        "options": [
+            "They have the same amplitude",
+            "Their electric vectors are zero",
+            "Their electric vectors have opposite directions",
+            "Their frequencies differ"
+        ],
+        "correct_answer": 2,
+        "explanation": "When two rays are \"out of phase\" on the wave front, their electric vectors have opposite directions.",
+        "category": "Crystallography",
+        "subtask": "Wave_Properties"
+    },
+    {
+        "question": "In crystal diffraction, what is the role of the Bragg angle (θ)?",
+        "options": [
+            "It determines the distance between crystal planes",
+            "It is the angle between the incident beam and crystal planes under consideration",
+            "It is the angle between two scattered rays",
+            "It determines the wavelength of the x-rays"
+        ],
+        "correct_answer": 1,
+        "explanation": "The Bragg angle (θ) is the angle between the incident beam and crystal planes under consideration in crystal diffraction.",
+        "category": "Crystallography",
+        "subtask": "Bragg_Diffraction"
+    },
+    {
+        "question": "What is the Bragg equation?",
+        "options": [
+            "nλ=2*d*cosθ",
+            "nλ=2*d*sinθ",
+            "nλ=d*sinθ"
+        ],
+        "correct_answer": 1,
+        "explanation": "The Bragg equation is nλ=2*d*sinθ, where n is the order of reflection, λ is wavelength, d is interplanar spacing, and θ is the Bragg angle.",
+        "category": "Crystallography",
+        "subtask": "Bragg_Diffraction"
+    },
+    {
+        "question": "Who formulated the relation known as Bragg's law?",
+        "options": [
+            "Max von Laue",
+            "W. H. Bragg",
+            "W. L. Bragg",
+            "Albert Einstein"
+        ],
+        "correct_answer": 2,
+        "explanation": "W. L. Bragg formulated the relation known as Bragg's law.",
+        "category": "Crystallography",
+        "subtask": "Historical_Development"
+    },
+    {
+        "question": "In Bragg's law, what does \"n\" represent?",
+        "options": [
+            "The distance between atomic planes",
+            "The wavelength of the incident x-ray",
+            "The order of reflection",
+            "The angle of incidence"
+        ],
+        "correct_answer": 2,
+        "explanation": "In Bragg's law, \"n\" represents the order of reflection.",
+        "category": "Crystallography",
+        "subtask": "Bragg_Diffraction"
+    },
+    {
+        "question": "What happens if the path difference between scattered rays is equal to nλ?",
+        "options": [
+            "The rays cancel each other",
+            "The rays reinforce each other to form a diffracted beam",
+            "The rays become unpolarized",
+            "The rays scatter in random directions"
+        ],
+        "correct_answer": 1,
+        "explanation": "When the path difference between scattered rays equals nλ, the rays reinforce each other to form a diffracted beam.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Principles"
+    },
+    {
+        "question": "How is scattering in a monatomic gas characterized?",
+        "options": [
+            "Weak and occurs in all directions",
+            "Strong and directional",
+            "Limited to specific crystal planes",
+            "Confined to one direction"
+        ],
+        "correct_answer": 0,
+        "explanation": "Scattering in a monatomic gas is characterized as weak and occurs in all directions.",
+        "category": "Crystallography",
+        "subtask": "Scattering_Phenomena"
+    },
+    {
+        "question": "In a perfect crystal, what happens to rays that do not satisfy the Bragg law?",
+        "options": [
+            "They contribute to the diffraction pattern",
+            "They scatter in all directions",
+            "There is no scattering as they cancel each other out",
+            "They produce a weak scattering pattern"
+        ],
+        "correct_answer": 2,
+        "explanation": "In a perfect crystal, rays that do not satisfy the Bragg law experience no scattering as they cancel each other out.",
+        "category": "Crystallography",
+        "subtask": "Bragg_Diffraction"
+    },
+    {
+        "question": "At what angles of incidence does diffraction of monochromatic x-rays occur?",
+        "options": [
+            "Any angle of incidence",
+            "Only angles that satisfy the Bragg law",
+            "Only angles perpendicular to the crystal planes",
+            "All angles except zero"
+        ],
+        "correct_answer": 1,
+        "explanation": "Diffraction of monochromatic x-rays occurs only at angles that satisfy the Bragg law.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Principles"
+    },
+    {
+        "question": "How does the intensity of a diffracted x-ray beam compare to that of the incident beam?",
+        "options": [
+            "It is almost 100 percent efficient",
+            "It is slightly stronger than the incident beam",
+            "It is extremely small compared to the incident beam",
+            "It is equal to the intensity of the incident beam"
+        ],
+        "correct_answer": 2,
+        "explanation": "The intensity of a diffracted x-ray beam is extremely small compared to the incident beam.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Diffraction"
+    },
+    {
+        "question": "According to Bragg's law, what is the relationship between the incident beam, the normal to the reflecting plane, and the diffracted beam?",
+        "options": [
+            "They are perpendicular to each other",
+            "They are parallel to each other",
+            "They are always coplanar",
+            "They intersect at a 45° angle"
+        ],
+        "correct_answer": 2,
+        "explanation": "According to Bragg's law, the incident beam, the normal to the reflecting plane, and the diffracted beam are always coplanar.",
+        "category": "Crystallography",
+        "subtask": "Bragg_Diffraction"
+    },
+    {
+        "question": "What is the angle between the diffracted beam and the transmitted beam known as?",
+        "options": [
+            "2θ (twice the angle of incidence)",
+            "90°",
+            "The critical angle"
+        ],
+        "correct_answer": 0,
+        "explanation": "The angle between the diffracted beam and the transmitted beam is known as 2θ (twice the angle of incidence).",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Geometry"
+    },
+    {
+        "question": "Why can't crystals typically diffract ultraviolet radiation?",
+        "options": [
+            "Ultraviolet radiation has insufficient energy",
+            "The wavelength of ultraviolet is too short for diffraction in typical crystals",
+            "The wavelength of ultraviolet is too long compared to the spacing of crystal planes",
+            "Crystals are opaque to ultraviolet radiation"
+        ],
+        "correct_answer": 2,
+        "explanation": "Crystals typically can't diffract ultraviolet radiation because its wavelength is too long compared to the spacing of crystal planes.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Limitations"
+    },
+    {
+        "question": "What practical issue arises if the wavelength λ is very small in diffraction studies?",
+        "options": [
+            "The diffraction angles become too large",
+            "The diffraction angles become too small to be conveniently measured",
+            "The diffracted beam becomes unobservable"
+        ],
+        "correct_answer": 1,
+        "explanation": "If the wavelength λ is very small in diffraction studies, the diffraction angles become too small to be conveniently measured.",
+        "category": "Crystallography",
+        "subtask": "Practical_Considerations"
+    },
+    {
+        "question": "Who designed the first x-ray spectrometer?",
+        "options": [
+            "Max von Laue",
+            "W. H. Bragg",
+            "Wilhelm Röntgen",
+            "Charles Siegbahn"
+        ],
+        "correct_answer": 1,
+        "explanation": "W. H. Bragg designed the first x-ray spectrometer.",
+        "category": "Crystallography",
+        "subtask": "Historical_Development"
+    },
+    {
+        "question": "What can x-ray diffraction reveal about a crystal's unit cell?",
+        "options": [
+            "The electrical conductivity",
+            "The volume and atomic arrangement",
+            "The color and texture",
+            "The magnetic properties"
+        ],
+        "correct_answer": 1,
+        "explanation": "X-ray diffraction can reveal the volume and atomic arrangement of a crystal's unit cell.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Analysis"
+    },
+    {
+        "question": "In x-ray spectroscopy, if the wavelength λ is known, what can be determined by measuring the angle θ?",
+        "options": [
+            "The type of crystal structure",
+            "The spacing d between crystal planes (structure analysis)",
+            "The atomic mass of the crystal",
+            "The density of the crystal"
+        ],
+        "correct_answer": 1,
+        "explanation": "In x-ray spectroscopy, if wavelength λ is known, measuring angle θ can determine the spacing d between crystal planes (structure analysis).",
+        "category": "Crystallography",
+        "subtask": "X-ray_Analysis"
+    },
+    {
+        "question": "How is x-ray density (ρ) defined in terms of atomic and unit cell properties?",
+        "options": [
+            "ρ = weight of atoms in unit cell / number of atoms in unit cell",
+            "ρ = weight of atoms in unit cell / volume of unit cell"
+        ],
+        "correct_answer": 1,
+        "explanation": "X-ray density (ρ) is defined as the weight of atoms in the unit cell divided by the volume of the unit cell.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Properties"
+    },
+    {
+        "question": "What does the spacing d of the reflecting lattice planes relate to?",
+        "options": [
+            "The position of the crystal relative to the detector.",
+            "The angle θ and the wavelength λ of the incident beam.",
+            "The number of diffraction spots.",
+            "The distance between two adjacent cones of radiation."
+        ],
+        "correct_answer": 1,
+        "explanation": "The spacing d of the reflecting lattice planes relates to the angle θ and the wavelength λ of the incident beam.",
+        "category": "Crystallography",
+        "subtask": "Lattice_Spacing"
+    },
+    {
+        "question": "What is the common use of the powder method in metallurgy?",
+        "options": [
+            "To analyze organic compounds.",
+            "When single-crystal specimens are unavailable.",
+            "To determine the melting point of alloys.",
+            "To calculate the density of metals."
+        ],
+        "correct_answer": 1,
+        "explanation": "The powder method is commonly used in metallurgy when single-crystal specimens are unavailable.",
+        "category": "Crystallography",
+        "subtask": "Powder_Method"
+    },
+    {
+        "question": "Which materials can the powder method help identify?",
+        "options": [
+            "Only pure metals.",
+            "Various phases in alloys, rocks, and corrosion products.",
+            "Only synthetic materials.",
+            "Only crystalline polymers."
+        ],
+        "correct_answer": 1,
+        "explanation": "The powder method can help identify various phases in alloys, rocks, and corrosion products.",
+        "category": "Crystallography",
+        "subtask": "Material_Analysis"
+    },
+    {
+        "question": "What type of radiation is used with a diffractometer?",
+        "options": [
+            "Polychromatic radiation.",
+            "Monochromatic radiation.",
+            "Ultraviolet radiation.",
+            "Infrared radiation."
+        ],
+        "correct_answer": 1,
+        "explanation": "A diffractometer uses monochromatic radiation.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Equipment"
+    },
+    {
+        "question": "What is the relationship between crystal size and angular divergence in diffraction?",
+        "options": [
+            "Smaller crystals cause greater angular divergence of the diffracted beam.",
+            "Larger crystals cause greater angular divergence of the diffracted beam.",
+            "Crystal size does not affect angular divergence.",
+            "Angular divergence increases with the perfection of the crystal."
+        ],
+        "correct_answer": 0,
+        "explanation": "Smaller crystals cause greater angular divergence of the diffracted beam.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Properties"
+    },
+    {
+        "question": "What equation is derived for the crystal thickness \"t\" using the Bragg angle?",
+        "options": [
+            "t = λ / (B*sinθB)",
+            "t = λ / (B*cosθB)",
+            "t = λ / (B*tanθB)"
+        ],
+        "correct_answer": 1,
+        "explanation": "The equation for crystal thickness using the Bragg angle is t = λ / (B*cosθB).",
+        "category": "Crystallography",
+        "subtask": "Crystal_Size"
+    },
+    {
+        "question": "What is the more exact form of the Scherrer formula for estimating crystal particle size?",
+        "options": [
+            "t = λ / (B*sinθB)",
+            "t = λ / (B*tanθB)",
+            "t = (0.9*λ) / (B*cosθB)"
+        ],
+        "correct_answer": 2,
+        "explanation": "The more exact form of the Scherrer formula is t = (0.9*λ) / (B*cosθB).",
+        "category": "Crystallography",
+        "subtask": "Crystal_Size"
+    },
+    {
+        "question": "What does the Scherrer formula estimate?",
+        "options": [
+            "The angle of diffraction.",
+            "The particle size of small crystals.",
+            "The intensity of diffracted beams.",
+            "The thickness of individual planes."
+        ],
+        "correct_answer": 1,
+        "explanation": "The Scherrer formula estimates the particle size of small crystals.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Size"
+    },
+    {
+        "question": "Why does a \"perfectly parallel beam\" not exist in real diffraction experiments?",
+        "options": [
+            "Divergent and convergent rays are always present.",
+            "It is impractical to achieve.",
+            "It does not contribute to diffraction.",
+            "It causes destructive interference."
+        ],
+        "correct_answer": 0,
+        "explanation": "A \"perfectly parallel beam\" does not exist in real diffraction experiments because divergent and convergent rays are always present.",
+        "category": "Crystallography",
+        "subtask": "Experimental_Limitations"
+    },
+    {
+        "question": "What is the typical width of the \"Kα\" line?",
+        "options": [
+            "0.1 Angstrom",
+            "0.01 Angstrom",
+            "0.001 Angstrom",
+            "1.5 Angstrom"
+        ],
+        "correct_answer": 2,
+        "explanation": "The typical width of the \"Kα\" line is 0.001 Angstrom.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Properties"
+    },
+    {
+        "question": "What is mosaic structure in crystals?",
+        "options": [
+            "A perfectly regular lattice arrangement of atoms.",
+            "A substructure where a crystal is broken into tiny blocks, slightly disoriented.",
+            "A defect caused by impurities in the crystal lattice.",
+            "A perfectly aligned array of single crystals."
+        ],
+        "correct_answer": 1,
+        "explanation": "Mosaic structure is a substructure where a crystal is broken into tiny blocks that are slightly disoriented.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Structure"
+    },
+    {
+        "question": "How does mosaic structure affect diffraction?",
+        "options": [
+            "It narrows the diffraction beam.",
+            "It increases the integrated intensity of the reflected beam.",
+            "It eliminates diffraction entirely.",
+            "It shifts the Bragg angle."
+        ],
+        "correct_answer": 1,
+        "explanation": "Mosaic structure increases the integrated intensity of the reflected beam.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Effects"
+    },
+    {
+        "question": "What happens when a single atom interacts with an incident beam of x-rays?",
+        "options": [
+            "It diffracts x-rays in a few specific directions.",
+            "It scatters x-rays in all directions in space.",
+            "It does not interact with x-rays at all.",
+            "It enhances constructive interference in crystals."
+        ],
+        "correct_answer": 1,
+        "explanation": "When a single atom interacts with an incident beam of x-rays, it scatters x-rays in all directions in space.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Scattering"
+    },
+    {
+        "question": "Why does diffraction occur at non-Bragg angles in imperfect crystals?",
+        "options": [
+            "Because the Bragg law does not apply to imperfect crystals.",
+            "Because crystal imperfections cause partial destructive interference.",
+            "Because x-rays scatter only from sub-grain boundaries.",
+            "Because dislocations enhance scattering at all angles."
+        ],
+        "correct_answer": 1,
+        "explanation": "Diffraction occurs at non-Bragg angles in imperfect crystals because crystal imperfections cause partial destructive interference.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Imperfections"
+    },
+    {
+        "question": "How are the atomic arrangements in amorphous solids and liquids described?",
+        "options": [
+            "Complete lack of periodicity but some tendency to \"order\"",
+            "Perfect structural periodicity"
+        ],
+        "correct_answer": 0,
+        "explanation": "Atomic arrangements in amorphous solids and liquids are described by a complete lack of periodicity but some tendency to \"order\".",
+        "category": "Crystallography",
+        "subtask": "Atomic_Arrangements"
+    },
+    {
+        "question": "What does the x-ray scattering curve for monatomic gases indicate?",
+        "options": [
+            "Broad maxima with no structural periodicity",
+            "Completely random arrangement with no structural periodicity",
+            "Tightly packed atomic arrangement",
+            "Highly ordered atomic periodicity"
+        ],
+        "correct_answer": 1,
+        "explanation": "The x-ray scattering curve for monatomic gases indicates a completely random arrangement with no structural periodicity.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Scattering"
+    },
+    {
+        "question": "Why does an accelerating or decelerating electron emit electromagnetic waves?",
+        "options": [
+            "It absorbs the X-ray energy and releases it as visible light.",
+            "It radiates energy due to its change in velocity.",
+            "It cancels out the oscillations in the X-ray field.",
+            "It generates waves due to electron-electron interactions."
+        ],
+        "correct_answer": 1,
+        "explanation": "An accelerating or decelerating electron emits electromagnetic waves because it radiates energy due to its change in velocity.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Physics"
+    },
+    {
+        "question": "What makes the scattered X-ray beam coherent with the incident beam?",
+        "options": [
+            "The wavelength and frequency of the scattered beam are different.",
+            "The phase of the scattered beam matches that of the incident beam.",
+            "The scattered beam is unaffected by electron oscillations.",
+            "The scattered beam changes the Bragg angle of the crystal."
+        ],
+        "correct_answer": 1,
+        "explanation": "The scattered X-ray beam is coherent with the incident beam when their phases match.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Scattering"
+    },
+    {
+        "question": "What is the phase change on scattering from an electron?",
+        "options": [
+            "λ/2",
+            "π/4",
+            "λ",
+            "2π"
+        ],
+        "correct_answer": 0,
+        "explanation": "The phase change on scattering from an electron is λ/2.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Scattering"
+    },
+    {
+        "question": "What primarily determines the intensity of the scattered X-ray beam?",
+        "options": [
+            "The frequency of the X-ray beam",
+            "The angle of scattering",
+            "The atomic number of the crystal",
+            "The velocity of the electron"
+        ],
+        "correct_answer": 1,
+        "explanation": "The intensity of the scattered X-ray beam is primarily determined by the angle of scattering.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Scattering"
+    },
+    {
+        "question": "What fraction of the total intensity of the incident beam is contributed by each plane-polarized component?",
+        "options": [
+            "1/2",
+            "1/4",
+            "1/2",
+            "1"
+        ],
+        "correct_answer": 2,
+        "explanation": "Each plane-polarized component contributes 1/2 of the total intensity of the incident beam.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Properties"
+    },
+    {
+        "question": "What happens to the scattered intensity as the distance r from the scattering electron increases?",
+        "options": [
+            "It remains constant.",
+            "It increases proportionally to r.",
+            "It decreases inversely proportional to r².",
+            "It depends only on the angle 2θ."
+        ],
+        "correct_answer": 2,
+        "explanation": "The scattered intensity decreases inversely proportional to r² as the distance from the scattering electron increases.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Scattering"
+    },
+    {
+        "question": "What is the value of K in the Thomson equation for the scattering of X-rays?",
+        "options": [
+            "7.94×10⁻²⁸ m²",
+            "7.94×10⁻²⁶ m²",
+            "8.02×10⁻²⁸ m²",
+            "6.63×10⁻²⁶ m²"
+        ],
+        "correct_answer": 1,
+        "explanation": "The value of K in the Thomson equation for X-ray scattering is 7.94×10⁻²⁶ m².",
+        "category": "Crystallography",
+        "subtask": "X-ray_Theory"
+    },
+    {
+        "question": "What is the main reason absolute intensities are not typically used in diffraction problems?",
+        "options": [
+            "They are too small to measure.",
+            "They are difficult to measure and calculate.",
+            "They depend only on polarization.",
+            "They vary depending on the wavelength."
+        ],
+        "correct_answer": 1,
+        "explanation": "Absolute intensities are not typically used in diffraction problems because they are difficult to measure and calculate.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Methods"
+    },
+    {
+        "question": "What happens to the energy of the X-ray photon after it is scattered in the Compton effect?",
+        "options": [
+            "It increases due to electron acceleration.",
+            "It remains the same as the incident photon.",
+            "It decreases because part of its energy is transferred to the electron.",
+            "It depends on the wavelength of the incident beam."
+        ],
+        "correct_answer": 2,
+        "explanation": "In the Compton effect, the X-ray photon's energy decreases because part of its energy is transferred to the electron.",
+        "category": "Crystallography",
+        "subtask": "Compton_Effect"
+    },
+    {
+        "question": "What is the equation for the change in wavelength (Δλ) due to the Compton effect?",
+        "options": [
+            "Δλ=0.05 *sinθ",
+            "Δλ=0.0486 * sin²θ",
+            "Δλ=0.0486 * cosθ",
+            "Δλ=0.05 * tanθ"
+        ],
+        "correct_answer": 1,
+        "explanation": "The change in wavelength due to the Compton effect is given by Δλ=0.0486 * sin²θ.",
+        "category": "Crystallography",
+        "subtask": "Compton_Effect"
+    },
+    {
+        "question": "What is a unique characteristic of Compton modified radiation?",
+        "options": [
+            "It is proportional to the atomic number Z.",
+            "It cannot take part in diffraction because it is incoherent.",
+            "It always has the same wavelength as the incident beam.",
+            "It strengthens the diffraction patterns."
+        ],
+        "correct_answer": 1,
+        "explanation": "A unique characteristic of Compton modified radiation is that it cannot take part in diffraction because it is incoherent.",
+        "category": "Crystallography",
+        "subtask": "Compton_Effect"
+    },
+    {
+        "question": "What is the primary undesirable effect of Compton modified scattering in diffraction experiments?",
+        "options": [
+            "It creates false interference patterns.",
+            "It increases the intensity of scattered radiation.",
+            "It shifts the Bragg peaks.",
+            "It darkens the background of diffraction patterns."
+        ],
+        "correct_answer": 3,
+        "explanation": "The primary undesirable effect of Compton modified scattering is that it darkens the background of diffraction patterns.",
+        "category": "Crystallography",
+        "subtask": "Compton_Effect"
+    },
+    {
+        "question": "In terms of quantum theory, when does coherent scattering occur?",
+        "options": [
+            "When the photon energy is higher than the electron's binding energy.",
+            "When the photon scatters without transferring momentum to the electron.",
+            "When the nucleus participates in scattering.",
+            "When the scattering angle is 90°"
+        ],
+        "correct_answer": 1,
+        "explanation": "According to quantum theory, coherent scattering occurs when the photon scatters without transferring momentum to the electron.",
+        "category": "Crystallography",
+        "subtask": "Coherent_Scattering"
+    },
+    {
+        "question": "Why does the nucleus of an atom not take part in coherent scattering?",
+        "options": [
+            "It has no charge to interact with the incident beam.",
+            "It is not affected by the Thomson equation.",
+            "Its mass is too large to oscillate appreciably under the beam.",
+            "It is shielded by the electrons in the atom."
+        ],
+        "correct_answer": 2,
+        "explanation": "The nucleus does not take part in coherent scattering because its mass is too large to oscillate appreciably under the beam.",
+        "category": "Crystallography",
+        "subtask": "Coherent_Scattering"
+    },
+    {
+        "question": "What determines the net effect of coherent scattering by an atom?",
+        "options": [
+            "The number of electrons in the atom.",
+            "The mass of the nucleus.",
+            "The wavelength of the incident beam.",
+            "The scattering angle."
+        ],
+        "correct_answer": 0,
+        "explanation": "The net effect of coherent scattering by an atom is determined by the number of electrons in the atom.",
+        "category": "Crystallography",
+        "subtask": "Coherent_Scattering"
+    },
+    {
+        "question": "What happens to the scattered waves in directions other than the forward direction?",
+        "options": [
+            "They remain perfectly in phase.",
+            "They become out of phase due to different electron positions.",
+            "They produce destructive interference only.",
+            "They are unaffected by the scattering angle"
+        ],
+        "correct_answer": 1,
+        "explanation": "Scattered waves in directions other than the forward direction become out of phase due to different electron positions.",
+        "category": "Crystallography",
+        "subtask": "Wave_Scattering"
+    },
+    {
+        "question": "What is the effect of partial interference on the net amplitude of scattered waves?",
+        "options": [
+            "It increases the amplitude in all directions.",
+            "It decreases the amplitude compared to forward scattering.",
+            "It eliminates the scattered waves completely.",
+            "It produces waves of the same amplitude in all directions."
+        ],
+        "correct_answer": 1,
+        "explanation": "Partial interference decreases the net amplitude of scattered waves compared to forward scattering.",
+        "category": "Crystallography",
+        "subtask": "Wave_Interference"
+    },
+    {
+        "question": "What is the atomic scattering factor \"f\"?",
+        "options": [
+            "The ratio of the intensity of the scattered wave to the incident wave.",
+            "The ratio of the amplitude of the wave scattered by an atom to the wave scattered by one electron.",
+            "The difference between the amplitudes of the forward-scattered and backward-scattered waves.",
+            "The sum of the amplitudes scattered by all the electrons in an atom."
+        ],
+        "correct_answer": 1,
+        "explanation": "The atomic scattering factor \"f\" is the ratio of the amplitude of the wave scattered by an atom to the wave scattered by one electron.",
+        "category": "Crystallography",
+        "subtask": "Scattering_Factors"
+    },
+    {
+        "question": "What happens to the atomic scattering factor f as the scattering angle θ increases?",
+        "options": [
+            "f remains constant.",
+            "f increases linearly.",
+            "f decreases as individual electrons scatter more out of phase.",
+            "f becomes independent of the wavelength."
+        ],
+        "correct_answer": 2,
+        "explanation": "As the scattering angle θ increases, the atomic scattering factor f decreases as individual electrons scatter more out of phase.",
+        "category": "Crystallography",
+        "subtask": "Scattering_Factors"
+    },
+    {
+        "question": "How does the atomic scattering factor (f) change as sin(θ)/λ increases?",
+        "options": [
+            "f increases.",
+            "f decreases.",
+            "f remains constant.",
+            "f oscillates."
+        ],
+        "correct_answer": 1,
+        "explanation": "The atomic scattering factor (f) decreases as sin(θ)/λ increases.",
+        "category": "Crystallography",
+        "subtask": "Scattering_Factors"
+    },
+    {
+        "question": "What is the atomic scattering factor (f) sometimes called, and why?",
+        "options": [
+            "The intensity factor, because it relates to the brightness of scattered waves.",
+            "The form factor, because it depends on the distribution of electrons around the nucleus.",
+            "The diffraction factor, because it determines the diffraction angle.",
+            "The phase factor, because it accounts for phase differences in scattered waves."
+        ],
+        "correct_answer": 1,
+        "explanation": "The atomic scattering factor is sometimes called the form factor because it depends on the distribution of electrons around the nucleus.",
+        "category": "Crystallography",
+        "subtask": "Scattering_Factors"
+    },
+    {
+        "question": "What type of scattering is expressed in terms of the atomic scattering factor f?",
+        "options": [
+            "Incoherent or modified scattering.",
+            "Coherent or unmodified scattering.",
+            "Compton scattering only.",
+            "Diffuse scattering."
+        ],
+        "correct_answer": 1,
+        "explanation": "The atomic scattering factor f expresses coherent or unmodified scattering.",
+        "category": "Crystallography",
+        "subtask": "Scattering_Types"
+    },
+    {
+        "question": "What happens to the coherently scattered radiation in a crystalline material?",
+        "options": [
+            "It is absorbed by the material.",
+            "It is reinforced in certain directions and canceled in others.",
+            "It forms a continuous spectrum of scattered beams.",
+            "It increases the intensity of modified scattering."
+        ],
+        "correct_answer": 1,
+        "explanation": "In a crystalline material, coherently scattered radiation is reinforced in certain directions and canceled in others.",
+        "category": "Crystallography",
+        "subtask": "Coherent_Scattering"
+    },
+    {
+        "question": "What determines the directions of the diffracted beams in a crystal?",
+        "options": [
+            "The wavelength of the incident X-rays.",
+            "The arrangement of atoms in the unit cell.",
+            "The Bragg law.",
+            "Both the Bragg law and the arrangement of atoms in the unit cell"
+        ],
+        "correct_answer": 3,
+        "explanation": "The directions of diffracted beams in a crystal are determined by both the Bragg law and the arrangement of atoms in the unit cell.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Principles"
+    },
+    {
+        "question": "Can diffraction occur if the Bragg law is not satisfied?",
+        "options": [
+            "Yes, diffraction can occur for certain atomic planes.",
+            "No, diffraction is impossible without satisfying the Bragg law.",
+            "Only for incoherent scattering.",
+            "It depends on the wavelength of the X-rays."
+        ],
+        "correct_answer": 1,
+        "explanation": "Diffraction cannot occur if the Bragg law is not satisfied.",
+        "category": "Crystallography",
+        "subtask": "Bragg_Law"
+    },
+    {
+        "question": "Why might no diffraction occur even if the Bragg law is satisfied for a set of atomic planes?",
+        "options": [
+            "The X-rays are absorbed by the atoms.",
+            "A particular arrangement of atoms cancels the scattered waves.",
+            "The scattering factor f is too small.",
+            "The X-ray wavelength is too long."
+        ],
+        "correct_answer": 1,
+        "explanation": "Even when the Bragg law is satisfied, diffraction might not occur if a particular arrangement of atoms cancels the scattered waves.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Conditions"
+    },
+    {
+        "question": "What is the general formula for the phase difference (φ) between the wave scattered by atom B and that scattered by atom A for the hkl reflection?",
+        "options": [
+            "φ=2π(hu+kw)",
+            "φ=2π(h+k+l)",
+            "φ=2π(hu+kv+lw)",
+            "φ=2π(hw+ku+lv)"
+        ],
+        "correct_answer": 2,
+        "explanation": "The general formula for the phase difference is φ=2π(hu+kv+lw).",
+        "category": "Crystallography",
+        "subtask": "Phase_Relations"
+    },
+    {
+        "question": "What is the analytical expression for a wave represented by a vector in the complex plane?",
+        "options": [
+            "A*sin(φ)",
+            "A*cos(φ)",
+            "A*cos(φ)+i*A*sin(φ)",
+            "A*sin(φ)+A*cos(φ)"
+        ],
+        "correct_answer": 2,
+        "explanation": "A wave represented by a vector in the complex plane is expressed as A*cos(φ)+i*A*sin(φ).",
+        "category": "Crystallography",
+        "subtask": "Wave_Mathematics"
+    },
+    {
+        "question": "What happens when a vector is multiplied twice by i?",
+        "options": [
+            "It rotates by 180° or reverses its sense.",
+            "It becomes a scalar.",
+            "It rotates by 90° twice, preserving its original orientation.",
+            "It is reflected across the imaginary axis."
+        ],
+        "correct_answer": 0,
+        "explanation": "When a vector is multiplied twice by i, it rotates by 180° or reverses its sense.",
+        "category": "Crystallography",
+        "subtask": "Complex_Mathematics"
+    },
+    {
+        "question": "What is the mathematical representation of a wave in complex exponential form?",
+        "options": [
+            "eiφ = cosφ − sinφ",
+            "Aeiφ = A*cosφ + A*i*sinφ"
+        ],
+        "correct_answer": 1,
+        "explanation": "A wave in complex exponential form is represented as Aeiφ = A*cosφ + A*i*sinφ.",
+        "category": "Crystallography",
+        "subtask": "Wave_Mathematics"
+    },
+    {
+        "question": "How is the square of the absolute value of a wave vector expressed in complex form?",
+        "options": [
+            "By multiplying the wave vector by its amplitude.",
+            "By squaring the amplitude directly.",
+            "By multiplying the complex wave vector by its complex conjugate.",
+            "By adding the real and imaginary components."
+        ],
+        "correct_answer": 2,
+        "explanation": "The square of the absolute value of a wave vector in complex form is expressed by multiplying the complex wave vector by its complex conjugate.",
+        "category": "Crystallography",
+        "subtask": "Complex_Mathematics"
+    },
+    {
+        "question": "What term is used to describe the resultant wave scattered by all the atoms of a unit cell?",
+        "options": [
+            "Atomic scattering factor.",
+            "Phase factor.",
+            "Structure factor.",
+            "Diffraction factor."
+        ],
+        "correct_answer": 2,
+        "explanation": "The resultant wave scattered by all the atoms of a unit cell is called the structure factor.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "How is the structure factor F for an hkl reflection expressed for a unit cell containing N atoms?",
+        "options": [
+            "As a product of the atomic coordinates and scattering factors.",
+            "As the sum of scattered waves represented by their amplitudes and phases.",
+            "As the average scattering intensity of all atoms in the unit cell.",
+            "As the difference between scattered and unscattered waves."
+        ],
+        "correct_answer": 1,
+        "explanation": "The structure factor F for an hkl reflection is expressed as the sum of scattered waves represented by their amplitudes and phases.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What determines the amplitude of each wave in the expression for the structure factor?",
+        "options": [
+            "The scattering angle.",
+            "The Bragg reflection intensity.",
+            "The atomic scattering factor f.",
+            "The wavelength of the incident beam."
+        ],
+        "correct_answer": 2,
+        "explanation": "The amplitude of each wave in the structure factor expression is determined by the atomic scattering factor f.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What does the absolute value |F| of the structure factor represent?",
+        "options": [
+            "The phase of the resultant wave.",
+            "The amplitude of the wave scattered by all atoms in the unit cell.",
+            "The average scattering intensity of the unit cell.",
+            "The square of the wave's amplitude."
+        ],
+        "correct_answer": 1,
+        "explanation": "The absolute value |F| of the structure factor represents the amplitude of the wave scattered by all atoms in the unit cell.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What is the intensity of a diffracted beam proportional to?",
+        "options": [
+            "|F|, the amplitude of the resultant wave.",
+            "|F|², the square of the amplitude of the resultant wave.",
+            "The phase difference between scattered waves.",
+            "The Bragg angle"
+        ],
+        "correct_answer": 1,
+        "explanation": "The intensity of a diffracted beam is proportional to |F|², the square of the amplitude of the resultant wave.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Intensity"
+    },
+    {
+        "question": "How is |F|² obtained in terms of the structure factor F?",
+        "options": [
+            "By integrating over the entire unit cell.",
+            "By multiplying F by its complex conjugate.",
+            "By summing the amplitudes of all atoms in the unit cell.",
+            "By subtracting the phase contributions."
+        ],
+        "correct_answer": 1,
+        "explanation": "|F|² is obtained by multiplying the structure factor F by its complex conjugate.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What does the structure factor F describe?",
+        "options": [
+            "The effect of atom arrangement on the scattered beam.",
+            "The interaction between X-rays and the electron cloud.",
+            "The distribution of intensities in the diffraction pattern.",
+            "The angular displacement of scattered waves."
+        ],
+        "correct_answer": 0,
+        "explanation": "The structure factor F describes the effect of atom arrangement on the scattered beam.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "In general, what form does the summation for F take?",
+        "options": [
+            "A scalar value.",
+            "A complex number F=a+ib",
+            "A purely imaginary number.",
+            "A real number."
+        ],
+        "correct_answer": 1,
+        "explanation": "The summation for F generally takes the form of a complex number F=a+ib.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What is the structure factor F for a unit cell containing only one atom at the origin with fractional coordinates 0,0,0?",
+        "options": [
+            "F=f",
+            "F=2f",
+            "F=3f",
+            "F=0"
+        ],
+        "correct_answer": 0,
+        "explanation": "For a unit cell containing only one atom at the origin (0,0,0), the structure factor F equals f.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "For a unit cell with one atom at the origin, how does F² depend on h,k, and l?",
+        "options": [
+            "It depends only on h+k+l.",
+            "It depends on the scattering angle.",
+            "It is independent of h,k, and l.",
+            "It varies with the atomic scattering factor f."
+        ],
+        "correct_answer": 2,
+        "explanation": "For a unit cell with one atom at the origin, F² is independent of h,k, and l.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What happens to F (structure factor) when h+k is odd in the base-centered unit cell?",
+        "options": [
+            "F=f",
+            "F=0",
+            "F=2f"
+        ],
+        "correct_answer": 1,
+        "explanation": "In a base-centered unit cell, when h+k is odd, the structure factor F equals 0.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What is the structure factor F for a base-centered unit cell when h and k are mixed (one is even and one is odd)?",
+        "options": [
+            "F=f",
+            "F=2f",
+            "F=4f",
+            "F=0"
+        ],
+        "correct_answer": 3,
+        "explanation": "For a base-centered unit cell with mixed h and k (one even, one odd), the structure factor F equals 0.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "For a body-centered cubic unit cell, when does F=2f?",
+        "options": [
+            "When h+k+l is odd.",
+            "When h+k+l is even.",
+            "When h,k, and l are unmixed.",
+            "When h+k is even."
+        ],
+        "correct_answer": 1,
+        "explanation": "In a body-centered cubic unit cell, F=2f when h+k+l is even.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What is the structure factor F for a face-centered cubic cell when h+k, h+l, and k+l are all even integers (unmixed indices)?",
+        "options": [
+            "F=f",
+            "F=2f",
+            "F=4f",
+            "F=16f"
+        ],
+        "correct_answer": 2,
+        "explanation": "For a face-centered cubic cell with unmixed indices (h+k, h+l, and k+l all even), F=4f.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What is the value of F² for a face-centered cubic unit cell with unmixed indices?",
+        "options": [
+            "F² = 4f²",
+            "F² = 14f²",
+            "F² = 8f²",
+            "F² = 16f²"
+        ],
+        "correct_answer": 3,
+        "explanation": "For a face-centered cubic unit cell with unmixed indices, F² = 16f².",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What is the general rule for the structure factor F for the body-centered cubic cell?",
+        "options": [
+            "F=2f if h+k+l is odd.",
+            "F=0 if h+k+l is odd.",
+            "F=f if h+k+l is mixed.",
+            "F=4f if h+k+l is even."
+        ],
+        "correct_answer": 1,
+        "explanation": "The general rule for the body-centered cubic cell is that F=0 if h+k+l is odd.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "Why is the structure-factor calculation often preferred over geometrical considerations for determining reflections?",
+        "options": [
+            "It is faster for complex structures.",
+            "It avoids errors in Bragg angle calculations.",
+            "It simplifies the determination of atomic scattering factors.",
+            "It does not require knowledge of the unit cell geometry."
+        ],
+        "correct_answer": 0,
+        "explanation": "Structure-factor calculation is often preferred because it is faster for complex structures.",
+        "category": "Crystallography",
+        "subtask": "Calculation_Methods"
+    },
+    {
+        "question": "What happens to the structure factor F for mixed indices in a face-centered cubic lattice?",
+        "options": [
+            "F=f",
+            "F=2f",
+            "F=4f",
+            "F=0"
+        ],
+        "correct_answer": 3,
+        "explanation": "For mixed indices in a face-centered cubic lattice, the structure factor F equals 0.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What must be inserted into the structure-factor equation for a crystal with multiple atom types?",
+        "options": [
+            "The Bragg angle for each atom.",
+            "The phase factor for each atom.",
+            "The proper atomic scattering factors for each atom.",
+            "The unit cell volume."
+        ],
+        "correct_answer": 2,
+        "explanation": "For crystals with multiple atom types, the proper atomic scattering factors for each atom must be inserted into the structure-factor equation.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "For NaCl, what happens to F if h+k+l is odd?",
+        "options": [
+            "F=0",
+            "F = 4 * ( fNa + fCl )",
+            "F = 4 * ( fNa - fCl )"
+        ],
+        "correct_answer": 2,
+        "explanation": "In NaCl, when h+k+l is odd, F = 4 * (fNa - fCl).",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What additional consideration must be taken for high-accuracy calculations of F in NaCl?",
+        "options": [
+            "The ionic nature of NaCl.",
+            "The lattice constant.",
+            "The Bragg angle.",
+            "The atomic number of Na and Cl."
+        ],
+        "correct_answer": 0,
+        "explanation": "For high-accuracy calculations of F in NaCl, the ionic nature of NaCl must be taken into consideration.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factor_Calculations"
+    },
+    {
+        "question": "What value does the structure factor F take when h,k, and l are mixed in NaCl?",
+        "options": [
+            "F=1",
+            "F=0",
+            "F=3",
+            "F=4"
+        ],
+        "correct_answer": 1,
+        "explanation": "When h,k, and l are mixed in NaCl, the structure factor F equals 0.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What condition leads to |F|² = 0 in the close-packed hexagonal cell?",
+        "options": [
+            "When h+k+l is even.",
+            "When h+k+l is odd.",
+            "When h+2k is a multiple of 3 and l is odd.",
+            "When h,k, and l are mixed."
+        ],
+        "correct_answer": 2,
+        "explanation": "In the close-packed hexagonal cell, |F|² = 0 when h+2k is a multiple of 3 and l is odd.",
+        "category": "Crystallography",
+        "subtask": "Structure_Factors"
+    },
+    {
+        "question": "What must be calculated first when determining the intensity of a diffracted beam?",
+        "options": [
+            "The absorption factor.",
+            "The structure factor.",
+            "The polarization factor.",
+            "The temperature factor."
+        ],
+        "correct_answer": 1,
+        "explanation": "When determining the intensity of a diffracted beam, the structure factor must be calculated first.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Intensity"
+    },
+    {
+        "question": "Which of the following is not a factor affecting the relative intensity of diffraction lines in the powder method?",
+        "options": [
+            "Multiplicity factor.",
+            "Lorentz factor.",
+            "Scattering angle factor.",
+            "Absorption factor."
+        ],
+        "correct_answer": 2,
+        "explanation": "The scattering angle factor is not a factor affecting the relative intensity of diffraction lines in the powder method.",
+        "category": "Crystallography",
+        "subtask": "Powder_Diffraction"
+    },
+    {
+        "question": "What are the two aspects of the diffraction curve that can be analyzed to find the dependence on the angle of incidence?",
+        "options": [
+            "Bragg angle and Lorentz factor.",
+            "Maximum intensity and peak position.",
+            "Maximum intensity and peak breadth.",
+            "Angular deviation and integrated intensity."
+        ],
+        "correct_answer": 2,
+        "explanation": "Maximum intensity and peak breadth are the two aspects of the diffraction curve that can be analyzed to find the dependence on the angle of incidence.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Analysis"
+    },
+    {
+        "question": "What is the expression for the combined Lorentz-polarization factor?",
+        "options": [
+            "1+cos²2θ/sin²θcosθ",
+            "1-cos²2θ/sin²θcosθ"
+        ],
+        "correct_answer": 0,
+        "explanation": "The combined Lorentz-polarization factor is expressed as (1+cos²2θ)/(sin²θcosθ).",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Factors"
+    },
+    {
+        "question": "What additional factor is combined with the Lorentz factor to form the Lorentz-polarization factor?",
+        "options": [
+            "The multiplicity factor.",
+            "The polarization factor.",
+            "The absorption factor.",
+            "The integrated intensity."
+        ],
+        "correct_answer": 1,
+        "explanation": "The polarization factor is combined with the Lorentz factor to form the Lorentz-polarization factor.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Factors"
+    },
+    {
+        "question": "What does the Lorentz-polarization factor depend on?",
+        "options": [
+            "The absorption coefficient.",
+            "The atomic scattering factor.",
+            "The angle θ and 2θ.",
+            "The structure factor F."
+        ],
+        "correct_answer": 2,
+        "explanation": "The Lorentz-polarization factor depends on the angle θ and 2θ.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Factors"
+    },
+    {
+        "question": "In the structure of NaCl, what is the total atomic weight (ΣA) per unit cell?",
+        "options": [
+            "2(at. wt. Na)+2(at. wt. Cl)",
+            "3(at. wt. Na)+3(at. wt. Cl)",
+            "4(at. wt. Na)+4(at. wt. Cl)",
+            "5(at. wt. Na)+5(at. wt. Cl)"
+        ],
+        "correct_answer": 2,
+        "explanation": "In the structure of NaCl, the total atomic weight per unit cell is 4(at. wt. Na)+4(at. wt. Cl).",
+        "category": "Crystallography",
+        "subtask": "Crystal_Structure"
+    },
+    {
+        "question": "What value did Siegbahn obtain for the spacing of the (200) planes in NaCl?",
+        "options": [
+            "1.541 Å",
+            "2.000 Å",
+            "2.814 Å",
+            "3.142 Å"
+        ],
+        "correct_answer": 2,
+        "explanation": "Siegbahn obtained a value of 2.814 Å for the spacing of the (200) planes in NaCl.",
+        "category": "Crystallography",
+        "subtask": "Experimental_Results"
+    },
+    {
+        "question": "What is the purpose of defining the x-ray density (ρ) as a \"theoretical density\"?",
+        "options": [
+            "It provides a measure that can be experimentally verified",
+            "It reflects the ideal density of a crystal without defects",
+            "It is used to calculate the atomic number of a crystal",
+            "It is the actual measured density of a crystal sample"
+        ],
+        "correct_answer": 1,
+        "explanation": "The x-ray density (ρ) is defined as a theoretical density because it reflects the ideal density of a crystal without defects.",
+        "category": "Crystallography",
+        "subtask": "X-ray_Properties"
+    },
+    {
+        "question": "The general relation for predicting the diffraction angle 2θ combines which two concepts?",
+        "options": [
+            "Bragg's Law and the Debye-Scherrer equation",
+            "The spacing equation and lattice symmetry",
+            "Bragg's Law and the plane-spacing equation",
+            "The absorption coefficient and Bragg's Law"
+        ],
+        "correct_answer": 2,
+        "explanation": "The general relation for predicting the diffraction angle 2θ combines Bragg's Law and the plane-spacing equation.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Principles"
+    },
+    {
+        "question": "In a cubic crystal, the equation for predicting possible Bragg angles is derived from:",
+        "options": [
+            "sin²θ=λ²/4c²(h²+k²+l²)",
+            "sin²θ=λ²/4a²(h²+k²+l²)"
+        ],
+        "correct_answer": 1,
+        "explanation": "In a cubic crystal, the equation for predicting possible Bragg angles is derived from sin²θ=λ²/4a²(h²+k²+l²).",
+        "category": "Crystallography",
+        "subtask": "Bragg_Angles"
+    },
+    {
+        "question": "For a tetragonal crystal with axes a and c, the equation for predicting the diffraction angle becomes:",
+        "options": [
+            "sin²θ=λ²/4(h²+k²/a²+l²/c²)",
+            "sin²θ=λ²/4c²(h²+k²+l²)"
+        ],
+        "correct_answer": 0,
+        "explanation": "For a tetragonal crystal with axes a and c, the equation for predicting the diffraction angle becomes sin²θ=λ²/4(h²+k²/a²+l²/c²).",
+        "category": "Crystallography",
+        "subtask": "Crystal_Systems"
+    },
+    {
+        "question": "The directions in which a crystal diffracts x-rays are determined by:",
+        "options": [
+            "The energy of x-rays and wavelength of light",
+            "The shape and size of the unit cell",
+            "The temperature and pressure conditions",
+            "The orientation of the x-ray source"
+        ],
+        "correct_answer": 1,
+        "explanation": "The directions in which a crystal diffracts x-rays are determined by the shape and size of the unit cell.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Principles"
+    },
+    {
+        "question": "Diffraction can occur whenever which of the following equations is satisfied?",
+        "options": [
+            "sinθ = d / λ",
+            "λ=2*d*sinθ",
+            "λ=d*sinθ"
+        ],
+        "correct_answer": 1,
+        "explanation": "Diffraction can occur whenever the equation λ=2*d*sinθ is satisfied.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Conditions"
+    },
+    {
+        "question": "Which of the following diffraction methods involves a variable wavelength (λ) and a fixed angle (θ)?",
+        "options": [
+            "Rotating-crystal method",
+            "Laue method",
+            "Powder method",
+            "None of the above"
+        ],
+        "correct_answer": 1,
+        "explanation": "The Laue method involves a variable wavelength (λ) and a fixed angle (θ).",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Methods"
+    },
+    {
+        "question": "In the Laue method, which arrangement places the film behind the crystal to record beams transmitted through the crystal?",
+        "options": [
+            "Rotating-crystal method",
+            "Back-reflection Laue method",
+            "Transmission Laue method",
+            "Powder method"
+        ],
+        "correct_answer": 2,
+        "explanation": "In the Laue method, the transmission Laue method arrangement places the film behind the crystal to record beams transmitted through the crystal.",
+        "category": "Crystallography",
+        "subtask": "Laue_Method"
+    },
+    {
+        "question": "In the Laue method, the diffraction patterns for transmission and back-reflection are generally in the shape of:",
+        "options": [
+            "Circles and ellipses",
+            "Ellipses and hyperbolas",
+            "Parabolas and circles",
+            "Hyperbolas and parabolas"
+        ],
+        "correct_answer": 1,
+        "explanation": "In the Laue method, the diffraction patterns for transmission and back-reflection are generally in the shape of ellipses and hyperbolas.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Patterns"
+    },
+    {
+        "question": "The spots lying on a single curve in the Laue pattern are reflections from planes:",
+        "options": [
+            "Parallel to the transmitted beam",
+            "Belonging to one zone",
+            "Perpendicular to the transmitted beam",
+            "Randomly oriented in the crystal"
+        ],
+        "correct_answer": 1,
+        "explanation": "The spots lying on a single curve in the Laue pattern are reflections from planes belonging to one zone.",
+        "category": "Crystallography",
+        "subtask": "Laue_Patterns"
+    },
+    {
+        "question": "When the angle φ exceeds 45°, the back-reflection pattern in the Laue method will intersect the cone in:",
+        "options": [
+            "A circle",
+            "An ellipse",
+            "A parabola",
+            "A hyperbola"
+        ],
+        "correct_answer": 3,
+        "explanation": "When the angle φ exceeds 45°, the back-reflection pattern in the Laue method will intersect the cone in a hyperbola.",
+        "category": "Crystallography",
+        "subtask": "Laue_Method"
+    },
+    {
+        "question": "In the rotating-crystal method, a single crystal is mounted with one of its axes:",
+        "options": [
+            "Parallel to the incident x-ray beam",
+            "Perpendicular to the rotation axis of the film",
+            "Aligned normal to a monochromatic x-ray beam",
+            "Aligned with the source of the x-ray beam"
+        ],
+        "correct_answer": 2,
+        "explanation": "In the rotating-crystal method, a single crystal is mounted with one of its axes aligned normal to a monochromatic x-ray beam.",
+        "category": "Crystallography",
+        "subtask": "Experimental_Methods"
+    },
+    {
+        "question": "What is the purpose of rotating the crystal in the rotating-crystal method?",
+        "options": [
+            "To allow the beam to penetrate all planes simultaneously",
+            "To obtain the Bragg angle for different sets of lattice planes",
+            "To distort the crystal structure and observe the effect",
+            "To increase the intensity of the x-ray beam"
+        ],
+        "correct_answer": 1,
+        "explanation": "The purpose of rotating the crystal in the rotating-crystal method is to obtain the Bragg angle for different sets of lattice planes.",
+        "category": "Crystallography",
+        "subtask": "Experimental_Methods"
+    },
+    {
+        "question": "In the powder method, the crystal to be examined is prepared by:",
+        "options": [
+            "Heating the crystal until it melts",
+            "Reducing it to a very fine powder",
+            "Cutting it into thin slices",
+            "Immersing it in a solution"
+        ],
+        "correct_answer": 1,
+        "explanation": "In the powder method, the crystal to be examined is prepared by reducing it to a very fine powder.",
+        "category": "Crystallography",
+        "subtask": "Powder_Method"
+    },
+    {
+        "question": "The mass of powder in the powder method is equivalent to:",
+        "options": [
+            "A single crystal rotated about all possible axes",
+            "A single crystal rotated about one axis",
+            "A fixed lattice structure with known orientation",
+            "A disordered array without symmetry"
+        ],
+        "correct_answer": 0,
+        "explanation": "The mass of powder in the powder method is equivalent to a single crystal rotated about all possible axes.",
+        "category": "Crystallography",
+        "subtask": "Powder_Method"
+    },
+    {
+        "question": "In the powder method, each particle of the powder is:",
+        "options": [
+            "A tiny crystal or an assemblage of smaller crystals",
+            "A uniform crystal with a fixed orientation",
+            "A single crystal perfectly aligned with the x-ray beam",
+            "An amorphous structure without a defined shape"
+        ],
+        "correct_answer": 0,
+        "explanation": "In the powder method, each particle of the powder is a tiny crystal or an assemblage of smaller crystals.",
+        "category": "Crystallography",
+        "subtask": "Powder_Method"
+    },
+    {
+        "question": "In the context of diffraction, the lowest 2θ value in the cubic system is produced by reflections from planes where:",
+        "options": [
+            "h²+k²+l² is a maximum",
+            "h²+k²+l² is a minimum",
+            "hkl values are all zero",
+            "The plane spacing d is minimized"
+        ],
+        "correct_answer": 1,
+        "explanation": "In the context of diffraction, the lowest 2θ value in the cubic system is produced by reflections from planes where h²+k²+l² is a minimum.",
+        "category": "Crystallography",
+        "subtask": "Diffraction_Principles"
+    },
+    {
+        "question": "In the context of diffraction, \"d\" value in the cubic system is maximum when:",
+        "options": [
+            "h²+k²+l² is a maximum",
+            "h²+k²+l² is a minimum",
+            "hkl values are all zero",
+            "The plane spacing d is minimized"
+        ],
+        "correct_answer": 1,
+        "explanation": "In the context of diffraction, \"d\" value in the cubic system is maximum when h²+k²+l² is a minimum.",
+        "category": "Crystallography",
+        "subtask": "Crystal_Properties"
+    }
+]
