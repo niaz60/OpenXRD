@@ -1,0 +1,222 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openxrd"
+version = "1.0.0"
+description = "A Comprehensive Benchmark and Enhancement Framework for LLM/MLLM XRD Question Answering"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Ali Vosoughi", email = "ali.vosoughi@rochester.edu"},
+    {name = "Ayoub Shahnazari", email = "ayoub.shahnazari@rochester.edu"},
+    {name = "Yufeng Xi", email = "yufeng.xi@rochester.edu"},
+    {name = "Zeliang Zhang", email = "zeliang.zhang@rochester.edu"},
+    {name = "Griffin Hess", email = "griffin.hess@rochester.edu"},
+    {name = "Chenliang Xu", email = "chenliang.xu@rochester.edu"},
+    {name = "Niaz Abdolrahim", email = "niaz.abdolrahim@rochester.edu"},
+]
+maintainers = [
+    {name = "Ali Vosoughi", email = "ali.vosoughi@rochester.edu"},
+    {name = "Ayoub Shahnazari", email = "ayoub.shahnazari@rochester.edu"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+keywords = [
+    "crystallography",
+    "x-ray diffraction",
+    "machine learning",
+    "language models",
+    "materials science",
+    "benchmark",
+    "evaluation",
+    "AI",
+    "LLM",
+    "MLLM",
+]
+dependencies = [
+    "pandas>=1.5.0",
+    "numpy>=1.21.0",
+    "torch>=1.12.0",
+    "transformers>=4.21.0",
+    "openai>=1.0.0",
+    "google-generativeai>=0.3.0",
+    "Pillow>=9.0.0",
+    "huggingface_hub>=0.15.0",
+    "tenacity>=8.0.0",
+    "python-dotenv>=0.19.0",
+    "tqdm>=4.64.0",
+    "matplotlib>=3.5.0",
+    "python-docx>=0.8.11",
+    "openpyxl>=3.0.0",
+    "scikit-learn>=1.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "mypy>=0.950",
+    "pre-commit>=2.15",
+    "sphinx>=4.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "myst-parser>=0.17.0",
+]
+visualization = [
+    "wordcloud>=1.9.0",
+    "seaborn>=0.11.0",
+]
+llava = [
+    "accelerate>=0.20.0",
+    "bitsandbytes>=0.39.0",
+    "deepspeed>=0.9.0",
+]
+all = [
+    "openxrd[dev,visualization,llava]",
+]
+
+[project.urls]
+Homepage = "https://github.com/niaz60/OpenXRD"
+Documentation = "https://niaz60.github.io/OpenXRD/"
+Repository = "https://github.com/niaz60/OpenXRD.git"
+"Bug Tracker" = "https://github.com/niaz60/OpenXRD/issues"
+"Paper" = "https://arxiv.org/abs/2507.09155"
+
+[project.scripts]
+openxrd-evaluate = "scripts.run_all_evaluations:main"
+openxrd-analyze = "scripts.analyze_subtasks:main"
+openxrd-visualize = "scripts.visualize_results:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.md", "*.txt"]
+
+# Black configuration
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+# isort configuration
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["src", "scripts"]
+
+# pytest configuration
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+    "openai: marks tests that require OpenAI API",
+    "gemini: marks tests that require Gemini API",
+    "llava: marks tests that require LLaVA models",
+]
+
+# Coverage configuration
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "setup.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+# MyPy configuration
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "openai.*",
+    "google.generativeai.*",
+    "llava.*",
+    "transformers.*",
+    "torch.*",
+    "wordcloud.*",
+    "seaborn.*",
+    "matplotlib.*",
+]
+ignore_missing_imports = true
+
+# Flake8 configuration (in setup.cfg style for compatibility)
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503", "E501"]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    ".eggs",
+    "*.egg-info",
+    ".venv",
+    ".tox",
+]
