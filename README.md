@@ -28,12 +28,20 @@ source .venv/bin/activate
 
 `./scripts/install.sh` prefers `uv` when available and falls back to `python -m venv` plus `pip` otherwise.
 
+Recommended and tested setup: Python `3.13`. The package metadata currently allows `3.9+`, but `3.13` is the documented target for the most reproducible local install.
+
 ### Direct Alternative
 
 ```bash
-python3 -m venv .venv
+python3.13 -m venv .venv
 source .venv/bin/activate
 pip install -e .
+```
+
+If `python3.13` is not on your `PATH`, use:
+
+```bash
+PYTHON_BIN=python3.13 ./scripts/install.sh
 ```
 
 ## Dataset
