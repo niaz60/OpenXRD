@@ -4,6 +4,8 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ipynb_checkpoints/
+.coverage
+htmlcov/
 .env
 build/
 dist/
