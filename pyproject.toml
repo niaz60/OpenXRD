@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openxrd"
+version = "1.0.0"
+description = "Repo-first evaluation toolkit for the OpenXRD benchmark."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "CC-BY-NC-4.0"
+authors = [
+  { name = "Ali Vosoughi" },
+  { name = "Ayoub Shahnazari" },
+  { name = "Niaz Abdolrahim" }
+]
+keywords = [
+  "crystallography",
+  "xrd",
+  "benchmark",
+  "evaluation",
+  "llm",
+  "science"
+]
+dependencies = [
+  "openai>=1.0.0",
+  "python-dotenv>=1.0.0",
+  "tenacity>=8.2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0"
+]
+
+[project.urls]
+Repository = "https://github.com/niaz60/OpenXRD"
+Website = "https://niaz60.github.io/OpenXRD/"
+Paper = "https://doi.org/10.1039/D5DD00519A"
+
+[project.scripts]
+openxrd-check = "openxrd.cli:main_check"
+openxrd-example = "openxrd.cli:main_example"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

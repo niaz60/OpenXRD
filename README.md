@@ -1,215 +1,131 @@
-# OpenXRD: A Comprehensive Benchmark Framework for LLM/MLLM XRD Question Answering
+# OpenXRD
 
 [![Paper](https://img.shields.io/badge/Paper-Digital%20Discovery-blue.svg)](https://pubs.rsc.org/en/Content/ArticleLanding/2025/DD/D5DD00519A)
-[![arXiv](https://img.shields.io/badge/arXiv-2507.09155-b31b1b.svg)](https://arxiv.org/abs/2507.09155)
+[![DOI](https://img.shields.io/badge/DOI-10.1039%2FD5DD00519A-1f6feb.svg)](https://doi.org/10.1039/D5DD00519A)
 [![Website](https://img.shields.io/badge/Website-OpenXRD-blue)](https://niaz60.github.io/OpenXRD/)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green.svg)](LICENSE)
 
-## 📋 Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Dataset](#dataset)
-- [Usage](#usage)
-- [Evaluation Scripts](#evaluation-scripts)
-- [Results](#results)
-- [Citation](#citation)
-- [Contributing](#contributing)
-- [License](#license)
+OpenXRD is a repo-first, researcher-facing package for evaluating language models on the OpenXRD crystallography benchmark. This refresh keeps the public release intentionally small:
 
-## 🔬 Overview
+1. install from the repo,
+2. acknowledge the dataset policy,
+3. unzip the evaluation dataset,
+4. set `OPENAI_API_KEY` or `OPENROUTER_API_KEY`,
+5. run a short evaluation example.
 
-OpenXRD is the benchmarking framework introduced in our accepted *Digital Discovery* paper for LLM/MLLM crystallography question answering. It presents an open-book pipeline that integrates textual prompts with concise supporting content. Instead of using scanned textbooks (which may lead to copyright issues), OpenXRD generates compact, domain-specific references that help smaller models understand key concepts in X-ray diffraction (XRD).
+The accepted paper is published in *Digital Discovery* with DOI [`10.1039/D5DD00519A`](https://doi.org/10.1039/D5DD00519A). RSC lists the manuscript as accepted on March 9, 2026 and first published on March 16, 2026.
 
-### Key Findings
-- **Mid-capacity models** (7B-34B parameters) benefit most from external knowledge
-- **Up to +11.5%** improvement with expert-reviewed materials vs +6% with AI-generated content alone
-- **Inverted U relationship**: Largest models show minimal improvement while smallest models have limited capacity to utilize additional information
+## Install
 
-## ✨ Features
+### Recommended
 
-- **Comprehensive Benchmark**: 217 expert-level XRD multiple-choice questions
-- **Dual Evaluation Modes**: Closed-book vs Open-book evaluation framework
-- **Multiple Model Support**: GPT-4, O1, O3, LLaVA, Gemini, and more
-- **Expert-Reviewed Materials**: AI-generated supporting content refined by crystallography experts
-- **Detailed Analysis**: Subtask-level performance analysis and visualization tools
-
-## 🚀 Installation
-
-### Prerequisites
-- `uv`
-- Python 3.13 recommended
-- Required API keys (see Configuration section)
-
-The `uv` workflow below was verified in a fresh environment with Python 3.13.7.
-
-### Setup
 ```bash
 git clone https://github.com/niaz60/OpenXRD.git
 cd OpenXRD
-uv venv --python 3.13 .venv
+./scripts/install.sh
 source .venv/bin/activate
-uv pip install -r requirements.txt
-
-# Optional: development, testing, and notebook tooling
-uv pip install -r requirements_dev.txt
 ```
 
-### Configuration
-Create a `.env` file in the root directory. You can start from `env_example.sh`:
+`./scripts/install.sh` prefers `uv` when available and falls back to `python -m venv` plus `pip` otherwise.
+
+### Direct Alternative
+
 ```bash
-cp env_example.sh .env
-
-# OpenAI API Key (for GPT models)
-OPENAI_API_KEY=your_openai_api_key_here
-
-# Google API Key (for Gemini models)
-GEMINI_API_KEY=your_gemini_api_key_here
-
-# Hugging Face Token (for LLaVA models, optional)
-HUGGINGFACE_TOKEN=your_hf_token_here
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
 ```
 
-## 📊 Dataset
+## Dataset
 
-The repository includes the following dataset artifacts in the `datasets/` directory:
+The public repo tracks the dataset as [`datasets/openxrd_dataset.zip`](datasets/openxrd_dataset.zip), not as extracted JSON files.
 
-- **`benchmarking_questions.json`**: 217 expert-curated XRD questions with explanations and subtask labels
-- **`supporting_textual_materials_generated.json`**: AI-generated supporting materials for open-book evaluation
-- **`supporting_textual_materials_expert_reviewed.json`**: Expert-refined supporting materials
-- **`openxrd_dataset.zip`**: Convenience archive containing the dataset release
+Why the dataset is zipped:
 
-### Dataset Structure
-```json
-{
-  "question": "What happens if the path difference between scattered rays is nλ?",
-  "options": ["They cancel each other", "They reinforce each other", "...", "..."],
-  "correct_answer": 1,
-  "explanation": "When two waves differ in path by nλ...",
-  "category": "Wave Physics",
-  "subtask": "Interference Phenomena"
-}
+- It adds friction against casual scraping.
+- It reduces accidental ingestion by online aggregation and crawling tools.
+- It is not strong protection or access control.
+
+OpenXRD is an evaluation-only dataset:
+
+- It must not be used to train, fine-tune, distill, align, or otherwise optimize models.
+- Use of the dataset is conditioned on citing the accepted *Digital Discovery* paper.
+
+Extract the dataset only after acknowledging that policy:
+
+```bash
+./scripts/unzip_dataset.sh --acknowledge
 ```
 
-### Dataset Usage Policy
+By default this extracts to `data/openxrd/`.
 
-- OpenXRD is an evaluation-only dataset.
-- The dataset must not be used for training, fine-tuning, distillation, alignment, or any other model optimization workflow.
-- Use of the dataset is conditioned on citing the accepted *Digital Discovery* paper listed in the [Citation](#citation) section.
+## Quick Start
 
-## 💻 Usage
+### Check Your Setup
 
-### Quick Start
+```bash
+openxrd-check
+```
+
+This reports:
+
+- whether the dataset archive is present,
+- whether extracted dataset files are available,
+- whether `OPENAI_API_KEY` and `OPENROUTER_API_KEY` are set.
+
+### OpenAI Example
+
+Create an OpenAI API key at `https://platform.openai.com/api-keys`, then:
+
+```bash
+export OPENAI_API_KEY="your-openai-key"
+openxrd-example --provider openai --model your-openai-model --limit 3
+```
+
+### OpenRouter Example
+
+Create an OpenRouter API key at `https://openrouter.ai/keys`, then:
+
+```bash
+export OPENROUTER_API_KEY="your-openrouter-key"
+openxrd-example --provider openrouter --model anthropic/claude-3.5-sonnet --limit 3
+```
+
+OpenRouter can be used to evaluate Claude-family models through the same OpenAI-compatible interface.
+
+### Python Example
+
 ```python
-from src.evaluation import evaluate_model
-from src.utils import load_dataset
+from openxrd import evaluate
 
-# Load dataset
-questions = load_dataset("datasets/benchmarking_questions.json")
-
-# Run evaluation (example with OpenAI)
-results = evaluate_model(
-    model_type="openai",
-    model_name="gpt-4",
-    questions=questions,
-    mode="closedbook"  # or "openbook"
+results = evaluate(
+    provider="openai",
+    model="your-openai-model",
+    mode="closedbook",
+    limit=3,
 )
 
-print(f"Accuracy: {results['accuracy']:.2%}")
+print(results["accuracy"])
 ```
 
-### Running Evaluations
+A short runnable example is also available at [`examples/basic_usage.py`](examples/basic_usage.py).
 
-#### OpenAI Models (GPT-4, O1, O3)
-```bash
-python scripts/evaluate_openai.py --model gpt-4 --mode closedbook
-python scripts/evaluate_openai.py --model gpt-4 --mode openbook
-```
+## Public API
 
-#### Gemini Models
-```bash
-python scripts/evaluate_gemini.py --model gemini-2.0-flash --mode closedbook
-```
+The public package intentionally exposes a small API:
 
-#### LLaVA Models
-```bash
-python scripts/evaluate_llava.py --model llava-v1.6-34b --mode openbook
-```
+- `load_questions()`
+- `load_supporting_materials(kind="expert_reviewed" | "generated")`
+- `evaluate(provider, model, mode, limit, material_kind, output_path=None)`
 
-#### Batch Evaluation
-```bash
-python scripts/run_all_evaluations.py
-```
+Supported providers in this public release:
 
-## 📁 Evaluation Scripts
+- `openai`
+- `openrouter`
 
-### Core Evaluation Scripts
-- `scripts/evaluate_openai.py` - OpenAI models (GPT-4, O1, O3)
-- `scripts/evaluate_gemini.py` - Google Gemini models
-- `scripts/evaluate_llava.py` - LLaVA vision-language models
-- `scripts/evaluate_llava_next.py` - LLaVA-NeXT models
+## Citation
 
-### Analysis Scripts
-- `scripts/analyze_subtasks.py` - Detailed subtask-level analysis
-- `scripts/generate_wordcloud.py` - Visualization of subtask distribution
-- `scripts/universal_subtask_analysis.py` - Cross-model comparison
-
-### Utility Scripts
-- `scripts/generate_docx.py` - Export questions to Word document
-- `scripts/reasoner_cheater.py` - Generate supporting materials
-
-## 📈 Results
-
-### Model Performance (Closed-book)
-| Rank | Model | Accuracy |
-|------|-------|----------|
-| 1 | GPT-4.5-preview | 93.09% |
-| 2 | O3-mini | 88.94% |
-| 3 | O1 | 87.56% |
-| 4 | GPT-4-turbo | 83.41% |
-| 5 | LLaVA-v1.6-34B | 66.80% |
-
-### Improvement with Expert-Reviewed Materials
-| Model | Closed-book | Open-book | Improvement |
-|-------|-------------|-----------|-------------|
-| LLaVA-v1.6-34B | 66.80% | 78.30% | +11.50% |
-| LLaVA-v1.6-mistral-7B | 53.00% | 64.10% | +11.10% |
-| O3-mini | 88.94% | 89.90% | +0.96% |
-
-## 🔧 Project Structure
-
-```
-OpenXRD/
-├── datasets/                          # Dataset files
-│   ├── benchmarking_questions.json
-│   ├── supporting_textual_materials_generated.json
-│   ├── supporting_textual_materials_expert_reviewed.json
-│   ├── openxrd_dataset.zip
-│   └── README.md
-├── src/                              # Core source code
-│   ├── __init__.py
-│   ├── evaluation.py                 # Main evaluation functions
-│   ├── models/                       # Model-specific implementations
-│   │   ├── openai_models.py
-│   │   ├── gemini_models.py
-│   │   └── llava_models.py
-│   └── utils.py                      # Utility functions
-├── scripts/                          # Evaluation scripts
-│   ├── evaluate_openai.py
-│   ├── evaluate_gemini.py
-│   ├── evaluate_llava.py
-│   ├── analyze_subtasks.py
-│   └── run_all_evaluations.py
-├── results/                          # Output directory
-├── requirements.txt                  # Python dependencies
-├── requirements_dev.txt              # Development dependencies
-├── env_example.sh                    # Environment variable template
-└── README.md                         # This file
-```
-
-## 📚 Citation
-
-If you use OpenXRD in your research, please cite our paper:
+If you use OpenXRD, cite:
 
 ```bibtex
 @article{Vosoughi_2025,
@@ -223,42 +139,20 @@ If you use OpenXRD in your research, please cite our paper:
 }
 ```
 
-RSC currently lists the paper as: A. Vosoughi, A. Shahnazari, Z. Zhang, Y. Xi, G. Hess, C. Xu and N. Abdolrahim, *Digital Discovery*, 2025, Accepted Manuscript, DOI: `10.1039/D5DD00519A`. The manuscript was accepted on March 9, 2026 and first published on March 16, 2026.
+RSC citation string:
 
-## 🤝 Contributing
+`A. Vosoughi, A. Shahnazari, Z. Zhang, Y. Xi, G. Hess, C. Xu and N. Abdolrahim, Digital Discovery, 2025, Accepted Manuscript, DOI: 10.1039/D5DD00519A`
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## Development
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+For local verification:
 
-## 📄 License
+```bash
+source .venv/bin/activate
+pip install -e ".[dev]"
+pytest
+```
 
-This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International Public License. See the [LICENSE](LICENSE) file for details.
+## License
 
-## 👥 Authors
-
-- **Ali Vosoughi** - University of Rochester
-- **Ayoub Shahnazari** - University of Rochester  
-- **Yufeng Xi** - University of Rochester
-- **Zeliang Zhang** - University of Rochester
-- **Griffin Hess** - University of Rochester
-- **Chenliang Xu** - University of Rochester
-- **Niaz Abdolrahim** - University of Rochester
-
-## 🙏 Acknowledgments
-
-- National Nuclear Security Administration (NNSA) under grant NA0004078
-- National Science Foundation (NSF) under grant 2202124
-- Department of Energy (DOE) under award DE-SC0020340
-
-## 📞 Contact
-
-For questions or collaboration opportunities, please open an issue or contact the maintainers.
-
----
-
-**Project Website**: [https://niaz60.github.io/OpenXRD/](https://niaz60.github.io/OpenXRD/)
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International Public License. See [LICENSE](LICENSE).
