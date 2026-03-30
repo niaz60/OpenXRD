@@ -3,145 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenXRD | Research-Ready XRD Benchmark Package</title>
+    <title>OpenXRD | Crystallography Benchmark for LLMs and Scientific Agents</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Sora:wght@400;500;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #f3efe7;
-            --ink: #15212e;
-            --muted: #506171;
-            --card: rgba(255, 251, 245, 0.92);
-            --line: rgba(21, 33, 46, 0.14);
-            --accent: #ad4d28;
-            --accent-dark: #7b3519;
-            --accent-soft: #efd6c7;
-            --steel: #355c7d;
-            --shadow: 0 22px 50px rgba(21, 33, 46, 0.12);
+            --bg: #f7f1e8;
+            --surface: rgba(255, 251, 245, 0.82);
+            --surface-strong: rgba(255, 249, 241, 0.96);
+            --ink: #122131;
+            --muted: #4b6071;
+            --line: rgba(18, 33, 49, 0.12);
+            --accent: #c4532f;
+            --accent-deep: #97381b;
+            --teal: #1f6f78;
+            --gold: #d49b26;
+            --shadow: 0 24px 70px rgba(18, 33, 49, 0.11);
+            --radius: 28px;
         }
 
         * {
             box-sizing: border-box;
         }
 
-        body {
-            margin: 0;
-            font-family: "IBM Plex Sans", sans-serif;
-            color: var(--ink);
-            background:
-                radial-gradient(circle at top left, rgba(173, 77, 40, 0.16), transparent 30%),
-                radial-gradient(circle at bottom right, rgba(53, 92, 125, 0.18), transparent 26%),
-                linear-gradient(180deg, #f8f4ed 0%, var(--bg) 100%);
+        html {
+            scroll-behavior: smooth;
         }
 
-        .frame {
-            max-width: 1180px;
+        body {
+            margin: 0;
+            font-family: "Source Sans 3", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(196, 83, 47, 0.17), transparent 26%),
+                radial-gradient(circle at 85% 10%, rgba(31, 111, 120, 0.18), transparent 24%),
+                radial-gradient(circle at bottom right, rgba(212, 155, 38, 0.14), transparent 20%),
+                linear-gradient(180deg, #fbf6ef 0%, var(--bg) 56%, #f3ecdf 100%);
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(18, 33, 49, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(18, 33, 49, 0.03) 1px, transparent 1px);
+            background-size: 34px 34px;
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 78%);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .shell {
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 32px 20px 64px;
+            padding: 28px 20px 72px;
+            position: relative;
+            z-index: 1;
         }
 
         .hero {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 24px;
+            grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+            gap: 22px;
             align-items: stretch;
-            margin-bottom: 28px;
         }
 
         .panel,
-        .card {
-            background: var(--card);
+        .card,
+        .figure-card,
+        .callout {
             border: 1px solid var(--line);
-            border-radius: 24px;
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
             backdrop-filter: blur(10px);
         }
 
+        .panel,
+        .card,
+        .figure-card {
+            background: var(--surface);
+        }
+
         .panel {
-            padding: 36px;
+            padding: 38px;
+        }
+
+        .hero-copy {
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.65), transparent 62%),
+                linear-gradient(180deg, rgba(255, 252, 248, 0.96), rgba(255, 248, 238, 0.9));
         }
 
         .eyebrow {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 999px;
             font-family: "IBM Plex Mono", monospace;
-            font-size: 12px;
+            font-size: 0.78rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 16px;
+            color: var(--accent-deep);
+            background: rgba(196, 83, 47, 0.1);
+            margin-bottom: 18px;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3,
+        h4 {
             margin: 0;
+            font-family: "Sora", sans-serif;
             line-height: 1.05;
         }
 
         h1 {
-            font-size: clamp(2.8rem, 6vw, 5rem);
-            margin-bottom: 18px;
+            font-size: clamp(3rem, 6.7vw, 5.7rem);
+            letter-spacing: -0.06em;
+            max-width: 10.2ch;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 3.8vw, 3rem);
+            letter-spacing: -0.045em;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            letter-spacing: -0.03em;
         }
 
         p {
             margin: 0;
-            line-height: 1.7;
             color: var(--muted);
+            line-height: 1.68;
+            font-size: 1.03rem;
         }
 
-        .hero-copy p {
-            font-size: 1.08rem;
-            max-width: 58ch;
+        .lead {
+            font-size: 1.16rem;
+            max-width: 59ch;
+            margin-top: 18px;
+        }
+
+        .definition-row {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 26px;
+        }
+
+        .definition {
+            padding: 16px 18px;
+            border-radius: 22px;
+            border: 1px solid rgba(18, 33, 49, 0.09);
+            background: rgba(255, 255, 255, 0.62);
+        }
+
+        .definition strong {
+            display: block;
+            margin-bottom: 8px;
+            font-family: "Sora", sans-serif;
+            font-size: 0.98rem;
+            color: var(--ink);
+        }
+
+        .definition span {
+            color: var(--muted);
+            font-size: 0.96rem;
+            line-height: 1.55;
         }
 
         .tag-row {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin: 22px 0 28px;
+            margin-top: 26px;
         }
 
         .tag {
-            border: 1px solid var(--line);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
             border-radius: 999px;
-            padding: 8px 12px;
-            font-size: 0.92rem;
+            border: 1px solid rgba(18, 33, 49, 0.09);
+            background: rgba(255, 255, 255, 0.66);
             color: var(--ink);
-            background: rgba(255, 255, 255, 0.6);
+            font-size: 0.98rem;
+        }
+
+        .tag strong {
+            font-family: "Sora", sans-serif;
+            font-size: 0.94rem;
         }
 
         .actions {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
+            margin-top: 28px;
         }
 
         .button {
-            display: inline-block;
-            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            padding: 12px 20px;
             border-radius: 999px;
-            padding: 14px 18px;
+            font-family: "Sora", sans-serif;
+            font-size: 0.96rem;
             font-weight: 600;
+            text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         }
 
         .button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 14px 26px rgba(21, 33, 46, 0.12);
+            box-shadow: 0 16px 28px rgba(18, 33, 49, 0.14);
         }
 
         .button-primary {
             background: var(--accent);
-            color: #fff7f2;
+            color: #fff7f1;
         }
 
         .button-primary:hover {
-            background: var(--accent-dark);
+            background: var(--accent-deep);
         }
 
         .button-secondary {
-            background: transparent;
-            color: var(--ink);
-            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid rgba(18, 33, 49, 0.1);
         }
 
         .hero-side {
@@ -149,34 +249,106 @@
             gap: 16px;
         }
 
-        .hero-metric {
+        .signal-board {
             padding: 26px;
+            background:
+                radial-gradient(circle at top right, rgba(31, 111, 120, 0.14), transparent 38%),
+                linear-gradient(180deg, rgba(247, 252, 252, 0.96), rgba(252, 247, 242, 0.92));
         }
 
-        .hero-metric strong {
-            display: block;
-            font-size: 2.4rem;
-            margin-bottom: 8px;
+        .board-label {
+            font-family: "IBM Plex Mono", monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--teal);
+            font-size: 0.76rem;
         }
 
-        .hero-metric span {
-            color: var(--muted);
+        .board-headline {
+            margin-top: 10px;
+            font-family: "Sora", sans-serif;
+            font-size: 1.9rem;
+            letter-spacing: -0.04em;
         }
 
-        .grid {
+        .board-text {
+            margin-top: 12px;
+        }
+
+        .board-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .board-stat {
+            padding: 16px;
+            border-radius: 22px;
+            border: 1px solid rgba(18, 33, 49, 0.09);
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .board-stat strong {
+            display: block;
+            font-family: "Sora", sans-serif;
+            font-size: 1.65rem;
+            margin-bottom: 6px;
+        }
+
+        .board-stat span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        .board-note {
+            margin-top: 16px;
+            padding: 16px 18px;
+            border-radius: 22px;
+            background: rgba(18, 33, 49, 0.9);
+            color: #eff5fb;
+        }
+
+        .board-note strong {
+            display: block;
+            margin-bottom: 6px;
+            font-family: "Sora", sans-serif;
+            font-size: 1rem;
+        }
+
+        .board-note span {
+            color: rgba(239, 245, 251, 0.84);
+            line-height: 1.55;
+            font-size: 0.96rem;
+        }
+
+        .meta-strip {
+            padding: 24px 26px;
+            background: var(--surface-strong);
+        }
+
+        .meta-strip ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 14px;
+        }
+
+        .meta-strip li {
+            display: flex;
+            justify-content: space-between;
             gap: 18px;
-            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 0.98rem;
         }
 
-        .card {
-            padding: 24px;
-        }
-
-        .card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
+        .meta-strip strong {
+            color: var(--ink);
+            font-family: "Sora", sans-serif;
+            font-size: 0.96rem;
         }
 
         .section {
@@ -186,194 +358,628 @@
         .section-head {
             display: flex;
             justify-content: space-between;
+            gap: 18px;
             align-items: end;
-            gap: 16px;
             margin-bottom: 16px;
         }
 
-        .section-head h2 {
-            font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+        .section-head p {
+            max-width: 42ch;
         }
 
-        .code {
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 0.93rem;
-            white-space: pre-wrap;
-            background: #fffaf4;
-            border: 1px solid rgba(21, 33, 46, 0.1);
-            border-radius: 18px;
-            padding: 18px;
-            color: #203445;
-        }
-
-        .wide {
+        .figure-card {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+            overflow: hidden;
+        }
+
+        .figure-visual {
+            padding: 22px;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 246, 244, 0.84));
+            border-right: 1px solid var(--line);
+        }
+
+        .figure-visual img {
+            display: block;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .figure-copy {
+            padding: 28px;
+            background:
+                radial-gradient(circle at top right, rgba(212, 155, 38, 0.12), transparent 40%),
+                linear-gradient(180deg, rgba(255, 250, 244, 0.96), rgba(255, 247, 240, 0.9));
+        }
+
+        .figure-copy .eyebrow {
+            margin-bottom: 14px;
+        }
+
+        .figure-points {
+            list-style: none;
+            margin: 18px 0 0;
+            padding: 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .figure-points li {
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.66);
+            border: 1px solid rgba(18, 33, 49, 0.08);
+            color: var(--muted);
+        }
+
+        .figure-points strong {
+            color: var(--ink);
+        }
+
+        .result-grid,
+        .audience-grid,
+        .steps,
+        .policy-grid {
+            display: grid;
             gap: 18px;
         }
 
-        ul {
-            margin: 14px 0 0;
+        .result-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .card {
+            padding: 24px;
+        }
+
+        .kicker {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.76rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent-deep);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .metric-line {
+            display: block;
+            margin-top: 14px;
+            font-family: "Sora", sans-serif;
+            font-size: 1.06rem;
+            color: var(--ink);
+        }
+
+        .callout {
+            margin-top: 20px;
+            padding: 24px 28px;
+            background:
+                linear-gradient(135deg, rgba(18, 33, 49, 0.96), rgba(30, 60, 86, 0.96));
+            color: #eff6fd;
+        }
+
+        .callout h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .callout p {
+            color: rgba(239, 246, 253, 0.84);
+        }
+
+        .loss-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .loss-tag {
+            padding: 10px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 0.95rem;
+            color: #f2f7fd;
+        }
+
+        .coverage {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+            gap: 18px;
+        }
+
+        .coverage-panel {
+            padding: 24px;
+        }
+
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .coverage-group {
+            padding: 18px;
+            border-radius: 22px;
+            border: 1px solid rgba(18, 33, 49, 0.08);
+            background: rgba(255, 255, 255, 0.64);
+        }
+
+        .coverage-group h4 {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: rgba(31, 111, 120, 0.1);
+            color: var(--ink);
+            font-size: 0.92rem;
+        }
+
+        .coverage-lead {
+            padding: 28px;
+            background:
+                radial-gradient(circle at top right, rgba(31, 111, 120, 0.12), transparent 45%),
+                linear-gradient(180deg, rgba(251, 255, 255, 0.9), rgba(245, 250, 248, 0.92));
+        }
+
+        .coverage-lead strong {
+            display: block;
+            margin-top: 20px;
+            font-family: "Sora", sans-serif;
+            font-size: 3rem;
+            letter-spacing: -0.08em;
+        }
+
+        .coverage-lead span {
+            display: block;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .audience-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .steps {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .step-number {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(196, 83, 47, 0.12);
+            font-family: "Sora", sans-serif;
+            color: var(--accent-deep);
+            margin-bottom: 14px;
+        }
+
+        .code {
+            margin-top: 14px;
+            padding: 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(18, 33, 49, 0.08);
+            background: rgba(255, 252, 246, 0.88);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            color: #22374b;
+        }
+
+        .policy-grid {
+            grid-template-columns: 0.92fr 1.08fr;
+        }
+
+        .policy-list,
+        .citation-list {
+            margin: 16px 0 0;
             padding-left: 18px;
             color: var(--muted);
         }
 
-        li + li {
+        .policy-list li + li,
+        .citation-list li + li {
             margin-top: 8px;
         }
 
-        .note {
-            border-left: 4px solid var(--accent);
-            padding-left: 16px;
+        .footnote {
+            margin-top: 14px;
+            padding: 14px 16px;
+            border-left: 4px solid var(--gold);
+            background: rgba(212, 155, 38, 0.08);
+            border-radius: 16px;
         }
 
         footer {
             margin-top: 36px;
             padding-top: 18px;
-            border-top: 1px solid var(--line);
+            border-top: 1px solid rgba(18, 33, 49, 0.1);
             display: flex;
             justify-content: space-between;
             gap: 16px;
             flex-wrap: wrap;
             color: var(--muted);
-            font-size: 0.95rem;
+            font-size: 0.96rem;
         }
 
-        a {
-            color: var(--steel);
-        }
-
-        @media (max-width: 900px) {
+        @media (max-width: 1080px) {
             .hero,
-            .grid,
-            .wide {
+            .figure-card,
+            .coverage,
+            .policy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .figure-visual {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .result-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 860px) {
+            .definition-row,
+            .board-grid,
+            .coverage-grid,
+            .audience-grid,
+            .steps,
+            .result-grid {
                 grid-template-columns: 1fr;
             }
 
             .panel,
-            .card {
-                padding: 24px;
+            .card,
+            .figure-copy,
+            .figure-visual {
+                padding: 22px;
+            }
+
+            .shell {
+                padding: 20px 16px 56px;
+            }
+
+            h1 {
+                max-width: none;
             }
         }
     </style>
 </head>
 <body>
-    <div class="frame">
+    <div class="shell">
         <section class="hero">
             <div class="panel hero-copy">
-                <div class="eyebrow">OpenXRD / Repo-First Package</div>
-                <h1>Research-ready XRD evaluation without the legacy sprawl.</h1>
-                <p>
-                    OpenXRD is a small public package for benchmarking language models on
-                    crystallography and X-ray diffraction questions. Install locally from the
-                    repo, acknowledge the dataset policy, unzip the benchmark, set an API key,
-                    and run a short OpenAI or OpenRouter evaluation.
+                <div class="eyebrow">Accepted In Digital Discovery · DOI 10.1039/D5DD00519A</div>
+                <h1>OpenXRD shows when scientific context helps models, and when it hurts.</h1>
+                <p class="lead">
+                    OpenXRD is a crystallography benchmark for researchers, students, and agents-for-science builders.
+                    It evaluates 74 language and multimodal models on 217 expert-curated X-ray diffraction questions
+                    spanning 81 subtasks, then measures how performance changes when models receive carefully written
+                    supporting passages.
                 </p>
+                <div class="definition-row">
+                    <div class="definition">
+                        <strong>Closed-book</strong>
+                        <span>The model answers from internal knowledge only, with no outside help.</span>
+                    </div>
+                    <div class="definition">
+                        <strong>Open-book</strong>
+                        <span>The model gets a short, question-specific passage that supports reasoning without leaking the answer.</span>
+                    </div>
+                    <div class="definition">
+                        <strong>Context Assimilation</strong>
+                        <span>The benchmark measures whether that added context is actually turned into better scientific reasoning.</span>
+                    </div>
+                </div>
                 <div class="tag-row">
-                    <div class="tag">217-question benchmark</div>
-                    <div class="tag">OpenAI + OpenRouter</div>
-                    <div class="tag">Evaluation-only dataset</div>
-                    <div class="tag">Accepted in Digital Discovery</div>
+                    <div class="tag"><strong>217</strong> expert-reviewed questions</div>
+                    <div class="tag"><strong>81</strong> crystallography subtasks</div>
+                    <div class="tag"><strong>74</strong> evaluated LLMs and MLLMs</div>
+                    <div class="tag"><strong>03·09·2026</strong> paper accepted</div>
                 </div>
                 <div class="actions">
-                    <a class="button button-primary" href="https://github.com/niaz60/OpenXRD">Open Repository</a>
-                    <a class="button button-secondary" href="https://doi.org/10.1039/D5DD00519A">Read Accepted Paper</a>
-                    <a class="button button-secondary" href="https://pubs.rsc.org/en/Content/ArticleLanding/2025/DD/D5DD00519A">RSC Article Page</a>
+                    <a class="button button-primary" href="https://doi.org/10.1039/D5DD00519A">Read The Paper</a>
+                    <a class="button button-secondary" href="#citation">Cite This Work</a>
+                    <a class="button button-secondary" href="#use-benchmark">Use The Benchmark</a>
                 </div>
             </div>
+
             <div class="hero-side">
-                <div class="card hero-metric">
-                    <strong>03·09·2026</strong>
-                    <span>Accepted in <em>Digital Discovery</em></span>
-                </div>
-                <div class="card hero-metric">
-                    <strong>03·16·2026</strong>
-                    <span>First published by the Royal Society of Chemistry</span>
-                </div>
-                <div class="card hero-metric">
-                    <strong>10.1039/D5DD00519A</strong>
-                    <span>DOI for citation and attribution</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="grid">
-            <article class="card">
-                <h3>Install</h3>
-                <p>The recommended path is repo-first: bootstrap a local environment and install the editable package in one step.</p>
-                <div class="code">git clone https://github.com/niaz60/OpenXRD.git
-cd OpenXRD
-./scripts/install.sh
-source .venv/bin/activate</div>
-            </article>
-            <article class="card">
-                <h3>Unlock The Dataset</h3>
-                <p>The benchmark stays zipped in the public repo. Extraction requires an explicit acknowledgment of the evaluation-only policy.</p>
-                <div class="code">./scripts/unzip_dataset.sh --acknowledge
-openxrd-check</div>
-            </article>
-            <article class="card">
-                <h3>Run A Short Example</h3>
-                <p>Set either an OpenAI key or an OpenRouter key, choose a model explicitly, and run a small evaluation sample.</p>
-                <div class="code">openxrd-example --provider openai --model your-openai-model --limit 3</div>
-            </article>
-        </section>
-
-        <section class="section">
-            <div class="section-head">
-                <h2>Provider Setup</h2>
-                <p>OpenRouter can be used for Claude-family models through the OpenAI-compatible interface.</p>
-            </div>
-            <div class="wide">
-                <article class="card">
-                    <h3>OpenAI</h3>
-                    <p>Generate a key at <a href="https://platform.openai.com/api-keys">platform.openai.com/api-keys</a>.</p>
-                    <div class="code">export OPENAI_API_KEY="your-openai-key"
-openxrd-example --provider openai --model your-openai-model --limit 3</div>
-                </article>
-                <article class="card">
-                    <h3>OpenRouter</h3>
-                    <p>Generate a key at <a href="https://openrouter.ai/keys">openrouter.ai/keys</a>.</p>
-                    <div class="code">export OPENROUTER_API_KEY="your-openrouter-key"
-openxrd-example --provider openrouter --model anthropic/claude-3.5-sonnet --limit 3</div>
-                </article>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-head">
-                <h2>Dataset Policy</h2>
-                <p>The archive is intentionally frictional, not access-controlled.</p>
-            </div>
-            <div class="wide">
-                <article class="card">
-                    <h3>Why It Is Zipped</h3>
-                    <p class="note">
-                        The public dataset is distributed as <code>datasets/openxrd_dataset.zip</code> to reduce casual scraping and accidental ingestion by online aggregation or crawling tools.
+                <div class="panel signal-board">
+                    <div class="board-label">Main Finding</div>
+                    <div class="board-headline">The sweet spot is not the biggest model.</div>
+                    <p class="board-text">
+                        Mid-sized models, especially in the 7B-70B range, benefit the most from expert-reviewed context.
+                        Frontier models often already know enough crystallography that extra passages create saturation or
+                        interference instead of improvement.
                     </p>
+                    <div class="board-grid">
+                        <div class="board-stat">
+                            <strong>+11.52%</strong>
+                            <span>LLaVA-v1.6-34B gains with expert-reviewed materials.</span>
+                        </div>
+                        <div class="board-stat">
+                            <strong>-5.78%</strong>
+                            <span>Grok-4-fast drops despite extra expert context.</span>
+                        </div>
+                        <div class="board-stat">
+                            <strong>78.34%</strong>
+                            <span>LLaVA-v1.6-34B open-book accuracy with expert materials.</span>
+                        </div>
+                        <div class="board-stat">
+                            <strong>84.33%</strong>
+                            <span>Llama-3.1-405B open-book accuracy for comparison.</span>
+                        </div>
+                    </div>
+                    <div class="board-note">
+                        <strong>Read and cite the paper before using the dataset.</strong>
+                        <span>The benchmark is evaluation-only and is released for scientific assessment, not for model training or distillation.</span>
+                    </div>
+                </div>
+
+                <div class="panel meta-strip">
                     <ul>
-                        <li>It adds friction, not strong protection.</li>
-                        <li>It keeps the public repo cleaner for researchers.</li>
-                        <li>It avoids advertising raw JSON as a default crawl target.</li>
+                        <li><strong>Accepted</strong><span>March 9, 2026 in <em>Digital Discovery</em></span></li>
+                        <li><strong>First Published</strong><span>March 16, 2026 by the Royal Society of Chemistry</span></li>
+                        <li><strong>Paper Focus</strong><span>Crystallography QA, open-book reasoning, and context assimilation</span></li>
+                        <li><strong>Project Link</strong><span><a href="https://github.com/niaz60/OpenXRD">github.com/niaz60/OpenXRD</a></span></li>
                     </ul>
-                </article>
-                <article class="card">
-                    <h3>Allowed Use</h3>
-                    <ul>
-                        <li>Evaluation and benchmarking only.</li>
-                        <li>No training, fine-tuning, distillation, or alignment use.</li>
-                        <li>Citation of the accepted paper is required when using the dataset.</li>
-                    </ul>
-                </article>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <div class="section-head">
-                <h2>Citation</h2>
-                <p>Use the accepted-paper citation rather than the older arXiv-only reference.</p>
+                <h2>Study Design At A Glance</h2>
+                <p>One accepted-paper figure anchors the page, but the story is in what happens when context quality and model capacity interact.</p>
             </div>
+            <div class="figure-card">
+                <div class="figure-visual">
+                    <img src="assets/closed_vs_open.png" alt="OpenXRD study design figure comparing parametric knowledge baseline with context-augmented inference.">
+                </div>
+                <div class="figure-copy">
+                    <div class="eyebrow">Accepted-Paper Figure</div>
+                    <h3>OpenXRD isolates the effect of guidance without retraining the model.</h3>
+                    <p>
+                        Every model sees the same benchmark questions. The difference is whether it answers from internal
+                        knowledge alone or with a curated supporting passage. That makes the benchmark useful for studying
+                        retrieval-style systems, scientific copilots, and agents that must decide whether added context is helping.
+                    </p>
+                    <ul class="figure-points">
+                        <li><strong>Controlled comparison:</strong> same questions, same answer format, different context conditions.</li>
+                        <li><strong>Quality matters:</strong> expert-reviewed passages outperform AI-generated passages even when token counts are matched.</li>
+                        <li><strong>Capacity matters:</strong> mid-sized models gain the most, while frontier models often plateau or degrade.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-head">
+                <h2>What Surprised Us</h2>
+                <p>These are the results that make the benchmark useful beyond a single crystallography domain paper.</p>
+            </div>
+            <div class="result-grid">
+                <article class="card">
+                    <span class="kicker">Finding 01</span>
+                    <h3>Mid-sized models get the biggest boost.</h3>
+                    <p>
+                        The clearest gains appear in models that have enough reasoning capacity to use extra context,
+                        but not enough domain knowledge to already saturate.
+                    </p>
+                    <span class="metric-line">7B-70B models are the main beneficiaries.</span>
+                </article>
+                <article class="card">
+                    <span class="kicker">Finding 02</span>
+                    <h3>More context can make top models worse.</h3>
+                    <p>
+                        Several frontier systems lose accuracy when extra expert-reviewed passages repeat or reframe
+                        knowledge they already carry internally.
+                    </p>
+                    <span class="metric-line">Interference is a real deployment risk.</span>
+                </article>
+                <article class="card">
+                    <span class="kicker">Finding 03</span>
+                    <h3>Quality beats quantity.</h3>
+                    <p>
+                        Expert-reviewed supporting materials outperform AI-generated alternatives even when the token
+                        budget is held constant, pointing to pedagogy and relevance rather than prompt length alone.
+                    </p>
+                    <span class="metric-line">Matched tokens, different outcomes.</span>
+                </article>
+                <article class="card">
+                    <span class="kicker">Finding 04</span>
+                    <h3>Smaller systems can get surprisingly competitive.</h3>
+                    <p>
+                        When paired with strong support passages, a much smaller model can approach the performance of
+                        far larger systems at a fraction of the deployment cost.
+                    </p>
+                    <span class="metric-line">LLaVA-v1.6-34B: 78.34% vs. Llama-3.1-405B: 84.33%.</span>
+                </article>
+            </div>
+
+            <div class="callout">
+                <h3>Counterintuitive result: some of the strongest models degrade in open-book mode.</h3>
+                <p>
+                    The accepted paper reports measurable drops for several frontier systems when expert-reviewed
+                    materials are added: not because the materials are wrong, but because redundant or stylistically
+                    mismatched context can disrupt an already strong internal representation.
+                </p>
+                <div class="loss-row">
+                    <div class="loss-tag">GPT-5 −3.68%</div>
+                    <div class="loss-tag">GPT-4.5-preview −3.23%</div>
+                    <div class="loss-tag">Grok-4-fast −5.78%</div>
+                    <div class="loss-tag">Claude-3.5-Sonnet −1.84%</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section coverage">
+            <div class="card coverage-lead">
+                <span class="kicker">Coverage</span>
+                <h2>Broad enough for teaching, sharp enough for scientific agents.</h2>
+                <p>
+                    OPENXRD does not cover a single trick question family. The benchmark spans fundamentals,
+                    geometry, structure analysis, scattering, phase reasoning, and mathematically demanding subtasks
+                    that still expose failure modes even in strong models.
+                </p>
+                <strong>81</strong>
+                <span>distinct crystallography subtasks represented in the accepted benchmark.</span>
+            </div>
+
+            <div class="card coverage-panel">
+                <span class="kicker">Sample Task Bands</span>
+                <div class="coverage-grid">
+                    <div class="coverage-group">
+                        <h4>Foundations</h4>
+                        <div class="chip-row">
+                            <span class="chip">Bragg diffraction</span>
+                            <span class="chip">Powder method</span>
+                            <span class="chip">Laue method</span>
+                            <span class="chip">Crystal systems</span>
+                        </div>
+                    </div>
+                    <div class="coverage-group">
+                        <h4>Structure And Symmetry</h4>
+                        <div class="chip-row">
+                            <span class="chip">Unit cell analysis</span>
+                            <span class="chip">Coordination numbers</span>
+                            <span class="chip">Crystal twinning</span>
+                            <span class="chip">Space-group interpretation</span>
+                        </div>
+                    </div>
+                    <div class="coverage-group">
+                        <h4>Scattering And Reciprocal Space</h4>
+                        <div class="chip-row">
+                            <span class="chip">Structure factors</span>
+                            <span class="chip">Scattering factors</span>
+                            <span class="chip">Reciprocal-space concepts</span>
+                            <span class="chip">Interference conditions</span>
+                        </div>
+                    </div>
+                    <div class="coverage-group">
+                        <h4>Interpretation And Practice</h4>
+                        <div class="chip-row">
+                            <span class="chip">Peak indexing</span>
+                            <span class="chip">Diffraction effects</span>
+                            <span class="chip">Microstructure effects</span>
+                            <span class="chip">Experimental limitations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footnote">
+                    The site uses a cleaner taxonomy view instead of the paper word cloud because the public page needs
+                    benchmark coverage, not model-specific labeling noise.
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-head">
+                <h2>Why This Matters</h2>
+                <p>The page is meant to be readable for students entering the field and useful for researchers building scientific copilots.</p>
+            </div>
+            <div class="audience-grid">
+                <article class="card">
+                    <span class="kicker">Materials Students</span>
+                    <h3>See where models help, and where they still fail.</h3>
+                    <p>
+                        OpenXRD makes it easy to compare confident scientific recall against genuinely brittle reasoning,
+                        especially on structural analysis and mathematically intensive tasks.
+                    </p>
+                </article>
+                <article class="card">
+                    <span class="kicker">CS Students</span>
+                    <h3>Study scientific discovery without conflating retrieval and reasoning.</h3>
+                    <p>
+                        Because the benchmark fixes the supporting passage, it separates retrieval quality from a model's
+                        ability to assimilate scientific evidence during inference.
+                    </p>
+                </article>
+                <article class="card">
+                    <span class="kicker">Agents For Science</span>
+                    <h3>Learn when extra context helps, saturates, or interferes.</h3>
+                    <p>
+                        That matters when designing agents that search literature, summarize evidence, or decide whether
+                        to trust an added reference at all.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="use-benchmark">
+            <div class="section-head">
+                <h2>Use OpenXRD In Three Steps</h2>
+                <p>The repo stays usable, but it now sits below the research teaser rather than replacing it.</p>
+            </div>
+            <div class="steps">
+                <article class="card">
+                    <div class="step-number">1</div>
+                    <h3>Install The Package</h3>
+                    <p>Clone the repo and bootstrap the local environment. The installer prefers <code>uv</code> and falls back to standard venv plus pip when needed.</p>
+                    <div class="code">git clone https://github.com/niaz60/OpenXRD.git
+cd OpenXRD
+./scripts/install.sh</div>
+                </article>
+                <article class="card">
+                    <div class="step-number">2</div>
+                    <h3>Acknowledge The Dataset Policy</h3>
+                    <p>The public archive stays zipped. Extraction requires an explicit acknowledgment because the dataset is released for evaluation and benchmarking only.</p>
+                    <div class="code">./scripts/unzip_dataset.sh --acknowledge
+openxrd-check</div>
+                </article>
+                <article class="card">
+                    <div class="step-number">3</div>
+                    <h3>Run A Short Evaluation</h3>
+                    <p>Set an API key for OpenAI or OpenRouter, choose a model explicitly, and run a small sample.</p>
+                    <div class="code">export OPENAI_API_KEY="your-openai-key"
+openxrd-example --provider openai --model your-model --limit 3</div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section policy-grid">
             <article class="card">
+                <span class="kicker">Dataset Policy</span>
+                <h2>Evaluation Only</h2>
+                <ul class="policy-list">
+                    <li>Use the dataset for benchmarking and scientific evaluation.</li>
+                    <li>Do not use it for training, fine-tuning, distillation, or alignment.</li>
+                    <li>Cite the accepted paper when using the benchmark or reporting results.</li>
+                    <li>The dataset is zipped to reduce casual scraping and accidental ingestion by aggregators, not to act as strong access control.</li>
+                </ul>
+            </article>
+
+            <article class="card" id="citation">
+                <span class="kicker">Citation</span>
+                <h2>Read The Work. Cite The Work.</h2>
+                <p>
+                    If OpenXRD informs a paper, benchmark comparison, scientific agent evaluation, classroom use, or
+                    dataset-based analysis, cite the accepted <em>Digital Discovery</em> article rather than an older preprint-only reference.
+                </p>
                 <div class="code">@article{Vosoughi_2025,
   title = {OPENXRD: A Comprehensive Benchmark Framework for LLM/MLLM XRD Question Answering},
   author = {Vosoughi, Ali and Shahnazari, Ayoub and Zhang, Zeliang and Xi, Yufeng and Hess, Griffin and Xu, Chenliang and Abdolrahim, Niaz},
@@ -383,12 +989,17 @@ openxrd-example --provider openrouter --model anthropic/claude-3.5-sonnet --limi
   doi = {10.1039/D5DD00519A},
   url = {https://doi.org/10.1039/D5DD00519A}
 }</div>
+                <ul class="citation-list">
+                    <li><a href="https://doi.org/10.1039/D5DD00519A">DOI landing page</a></li>
+                    <li><a href="https://pubs.rsc.org/en/Content/ArticleLanding/2025/DD/D5DD00519A">RSC article page</a></li>
+                    <li><a href="https://github.com/niaz60/OpenXRD">OpenXRD repository</a></li>
+                </ul>
             </article>
         </section>
 
         <footer>
             <div>OpenXRD is licensed under CC BY-NC 4.0.</div>
-            <div>Project site: <a href="https://github.com/niaz60/OpenXRD">github.com/niaz60/OpenXRD</a></div>
+            <div>Project site: <a href="https://niaz60.github.io/OpenXRD/">niaz60.github.io/OpenXRD</a></div>
         </footer>
     </div>
 </body>

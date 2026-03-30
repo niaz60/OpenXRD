@@ -153,6 +153,14 @@ pip install -e ".[dev]"
 pytest
 ```
 
+## Website Publishing
+
+The project website at `https://niaz60.github.io/OpenXRD/` is published from `main` via GitHub Actions.
+
+- The source of truth stays at the repo root in `index.html`.
+- The Pages deployment workflow is defined in `.github/workflows/pages.yml`.
+- In GitHub repository settings, Pages should be configured to use `GitHub Actions` as the source.
+
 ## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International Public License. See [LICENSE](LICENSE).
