@@ -1,4 +1,6 @@
-# Development dependencies for OpenXRD
+# Full development environment for OpenXRD
+
+-r requirements.txt
 
 # Testing
 pytest>=6.0.0

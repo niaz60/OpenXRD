@@ -1,8 +1,9 @@
-# OpenXRD: A Comprehensive Benchmark and Enhancement Framework for LLM/MLLM XRD Question Answering
+# OpenXRD: A Comprehensive Benchmark Framework for LLM/MLLM XRD Question Answering
 
-[![Paper](https://img.shields.io/badge/arXiv-2507.09155-b31b1b.svg)](https://arxiv.org/abs/2507.09155)
+[![Paper](https://img.shields.io/badge/Paper-Digital%20Discovery-blue.svg)](https://pubs.rsc.org/en/Content/ArticleLanding/2025/DD/D5DD00519A)
+[![arXiv](https://img.shields.io/badge/arXiv-2507.09155-b31b1b.svg)](https://arxiv.org/abs/2507.09155)
 [![Website](https://img.shields.io/badge/Website-OpenXRD-blue)](https://niaz60.github.io/OpenXRD/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green.svg)](LICENSE)
 
 ## 📋 Table of Contents
 - [Overview](#overview)
@@ -18,7 +19,7 @@
 
 ## 🔬 Overview
 
-OpenXRD presents an open-book pipeline designed for crystallography question answering, integrating textual prompts with concise supporting content. Instead of using scanned textbooks (which may lead to copyright issues), OpenXRD generates compact, domain-specific references that help smaller models understand key concepts in X-ray diffraction (XRD).
+OpenXRD is the benchmarking framework introduced in our accepted *Digital Discovery* paper for LLM/MLLM crystallography question answering. It presents an open-book pipeline that integrates textual prompts with concise supporting content. Instead of using scanned textbooks (which may lead to copyright issues), OpenXRD generates compact, domain-specific references that help smaller models understand key concepts in X-ray diffraction (XRD).
 
 ### Key Findings
 - **Mid-capacity models** (7B-34B parameters) benefit most from external knowledge
@@ -36,19 +37,29 @@ OpenXRD presents an open-book pipeline designed for crystallography question ans
 ## 🚀 Installation
 
 ### Prerequisites
-- Python 3.8+
+- `uv`
+- Python 3.13 recommended
 - Required API keys (see Configuration section)
+
+The `uv` workflow below was verified in a fresh environment with Python 3.13.7.
 
 ### Setup
 ```bash
 git clone https://github.com/niaz60/OpenXRD.git
 cd OpenXRD
-pip install -r requirements.txt
+uv venv --python 3.13 .venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+
+# Optional: development, testing, and notebook tooling
+uv pip install -r requirements_dev.txt
 ```
 
 ### Configuration
-Create a `.env` file in the root directory:
+Create a `.env` file in the root directory. You can start from `env_example.sh`:
 ```bash
+cp env_example.sh .env
+
 # OpenAI API Key (for GPT models)
 OPENAI_API_KEY=your_openai_api_key_here
 
@@ -61,11 +72,12 @@ HUGGINGFACE_TOKEN=your_hf_token_here
 
 ## 📊 Dataset
 
-The repository includes three main dataset files in the `datasets/` directory:
+The repository includes the following dataset artifacts in the `datasets/` directory:
 
 - **`benchmarking_questions.json`**: 217 expert-curated XRD questions with explanations and subtask labels
 - **`supporting_textual_materials_generated.json`**: AI-generated supporting materials for open-book evaluation
 - **`supporting_textual_materials_expert_reviewed.json`**: Expert-refined supporting materials
+- **`openxrd_dataset.zip`**: Convenience archive containing the dataset release
 
 ### Dataset Structure
 ```json
@@ -78,6 +90,12 @@ The repository includes three main dataset files in the `datasets/` directory:
   "subtask": "Interference Phenomena"
 }
 ```
+
+### Dataset Usage Policy
+
+- OpenXRD is an evaluation-only dataset.
+- The dataset must not be used for training, fine-tuning, distillation, alignment, or any other model optimization workflow.
+- Use of the dataset is conditioned on citing the accepted *Digital Discovery* paper listed in the [Citation](#citation) section.
 
 ## 💻 Usage
 
@@ -165,7 +183,9 @@ OpenXRD/
 ├── datasets/                          # Dataset files
 │   ├── benchmarking_questions.json
 │   ├── supporting_textual_materials_generated.json
-│   └── supporting_textual_materials_expert_reviewed.json
+│   ├── supporting_textual_materials_expert_reviewed.json
+│   ├── openxrd_dataset.zip
+│   └── README.md
 ├── src/                              # Core source code
 │   ├── __init__.py
 │   ├── evaluation.py                 # Main evaluation functions
@@ -182,7 +202,8 @@ OpenXRD/
 │   └── run_all_evaluations.py
 ├── results/                          # Output directory
 ├── requirements.txt                  # Python dependencies
-├── .env.example                      # Environment variables template
+├── requirements_dev.txt              # Development dependencies
+├── env_example.sh                    # Environment variable template
 └── README.md                         # This file
 ```
 
@@ -191,13 +212,18 @@ OpenXRD/
 If you use OpenXRD in your research, please cite our paper:
 
 ```bibtex
-@article{vosoughi2025openxrd,
-  title={OPENXRD: A Comprehensive Benchmark and Enhancement Framework for LLM/MLLM XRD Question Answering},
-  author={Vosoughi, Ali and Shahnazari, Ayoub and Xi, Yufeng and Zhang, Zeliang and Hess, Griffin and Xu, Chenliang and Abdolrahim, Niaz},
-  journal={arXiv preprint arXiv:2507.09155},
-  year={2025}
+@article{Vosoughi_2025,
+  title = {OPENXRD: A Comprehensive Benchmark Framework for LLM/MLLM XRD Question Answering},
+  author = {Vosoughi, Ali and Shahnazari, Ayoub and Zhang, Zeliang and Xi, Yufeng and Hess, Griffin and Xu, Chenliang and Abdolrahim, Niaz},
+  journal = {Digital Discovery},
+  publisher = {Royal Society of Chemistry (RSC)},
+  year = {2025},
+  doi = {10.1039/D5DD00519A},
+  url = {https://doi.org/10.1039/D5DD00519A}
 }
 ```
+
+RSC currently lists the paper as: A. Vosoughi, A. Shahnazari, Z. Zhang, Y. Xi, G. Hess, C. Xu and N. Abdolrahim, *Digital Discovery*, 2025, Accepted Manuscript, DOI: `10.1039/D5DD00519A`. The manuscript was accepted on March 9, 2026 and first published on March 16, 2026.
 
 ## 🤝 Contributing
 
@@ -211,7 +237,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 
 ## 📄 License
 
-This project is Creative Commons Attribution-NonCommercial 4.0 International Public License- see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International Public License. See the [LICENSE](LICENSE) file for details.
 
 ## 👥 Authors
 
